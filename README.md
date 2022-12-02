@@ -98,10 +98,10 @@ Nous allons donc faire un mix entre **``MSP-OSD``** pour toutes les infos à la 
 
 Nous verrons également comment modifier l'emplacement des éléments du HUD DJI, modifier la police du HUD DJI, créer une nouvelle police pour MSP-OSD... 
 
-Voici un exemple avant/après de ce qu'il est possible de faire :<br />
+Voici un exemple avant/après de ce qu'il est possible de faire : (De meilleures immages arrivent bientot !)<br />
 | Avant (**HUD DJI**) | Après (**MSP-OSD + FakeHD + HUD DJI Custom + Fonts Custom**) |
 |-------|-------|
-|![before-osd](img/before.png)|![After-osd](img/after.png)|
+|<img src="img/before.png" width="600">|<img src="img/after.png" width="600">|
 
 
 ℹ️ Les infos ici relèvent de ma propre expérience, toutes les <a href="#readme-top">sources</a> sont citées en haut du doc.<br />
@@ -288,7 +288,7 @@ Redémarrer le masque pour appliquer les changements.<br/>
 
 Les fichiers de police sont situés dans le dossier : ``system/fonts``. La police par défaut est ``WM150font.ttf``<br/>
 Il est possible de copier un nouveau fichier de police au format ``.ttf`` uniquement dans ce même dossier.<br/>
-Dans mon cas, j'ai utilisé la police [Conthrax](https://www.dafont.com/fr/conthrax.font?text=EVilm1%27s+Font) que j'ai également utilisé dans [la police que j'ai générée](https://github.com/EVilm1/EVilm1-Font) pour le ``MSP-OSD``.<br/>
+Dans mon cas, j'ai utilisé la police [Conthrax](https://www.dafont.com/fr/conthrax.font?text=EVilm1%27s+Font) que j'ai également utilisé dans [la police que j'ai générée](https://github.com/EVilm1/EVilm1-OSD-Font) pour le ``MSP-OSD``.<br/>
 
 ℹ️ Ne pas renommer le fichier ``.ttf`` sinon ça ne marchera pas et le masque n'arrivera pas à charger l'osd.
 
@@ -325,7 +325,7 @@ Ouvrir l'image générée avec votre logiciel d'édition préféré (J'utilise P
 J'ai créé un fichier Photoshop ``template_overlay.psd`` utilisant le fichier ``template_overlay.png`` (avec des repères en plus) que vous pouvez télécharger [ici](https://github.com/EVilm1/WIKI-HACK-OSD-DJI/blob/master/template_overlay.psd) si vous utilisez Photoshop.<br/><br/>
 ![Photoshop](/img/photoshop_template.png)
 
-Pour savoir ou placer les icones dans la grille, nous pouvons nous calquer sur les fonts classiques de Betaflight [ici](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) ou sur des fonts HD comme [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) ou [d'autres fonts HD](https://github.com/EVilm1/WIKI-HACK-OSD-DJI#5-les-fonts-msp-osd).
+Pour savoir ou placer les icones dans la grille, nous pouvons nous calquer sur les fonts classiques de Betaflight [ici](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) ou sur des fonts HD comme [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) ou [d'autres fonts HD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#5-les-fonts-msp-osd).
 
 Exporter l'image toujours en ``.png`` au format ``576 x 1728`` avec un fond alpha (transparent).<br/>
 
@@ -334,7 +334,7 @@ Pour convertir l'image en 4 fichiers ``.bin``, exécuter avec python (en rempla�
 python3 template2img.py [NomDeVotreImage].png
 ```
 4 fichiers ``.bin`` ont été générés à la racine du dossier. Les renommer en ``font_bf.bin``, ``font_bf_2.bin``,	``font_bf_hd.bin``, ``font_bf_hd_2.bin`` (pour Betaflight uniquement).
-Enfin, utiliser uniquement ``font_bf_hd.bin`` et ``font_bf_hd_2.bin`` si [FakeHD](https://github.com/EVilm1/WIKI-HACK-OSD-DJI#3-fakehd) est installé, sinon les 4.
+Enfin, utiliser uniquement ``font_bf_hd.bin`` et ``font_bf_hd_2.bin`` si [FakeHD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#3-fakehd) est installé, sinon les 4.
 
 Un OSD de qualité demande du temps, bonne chance ! 😉
 
