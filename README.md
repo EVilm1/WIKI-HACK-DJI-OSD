@@ -71,7 +71,7 @@
             <li><a href="#modifier-le-fichier-xml">Modifier le fichier .xml</a></li>
           </ul>
         <li><a href="#modifier-la-police-de-lhud-dji">Modifier la police de l'HUD DJI</a></li>
-        <li><a href="#modifier-les-icones-de-lhud-dji">Modifier les icones de l'HUD DJI</a></li>
+        <li><a href="#modifier-les-ic%C3%B4nes-de-lhud-dji">Modifier les icones de l'HUD DJI</a></li>
       </ul>
     </li>
     <li><a href="#7-config-avancée-générer-sa-propre-font-pour-msp-osd">(Config avancée) Générer sa propre Font pour MSP-OSD</a></li>
