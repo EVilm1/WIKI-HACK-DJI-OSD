@@ -23,7 +23,7 @@
     <img src="img/logo.png" alt="Logo" width="280">
   </a>
 
-  <h3 align="center">WIKI HACK OSD DJI</h3>
+  <h3 align="center">WIKI HACK DJI OSD</h3>
 
   <p align="center">
     ✨ Personnalisez votre OSD ✨
