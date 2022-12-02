@@ -340,8 +340,8 @@ Un OSD de qualité demande du temps, bonne chance ! 😉
 
 ## Sources / Remerciements
 
-https://github.com/fpv-wtf
-https://github.com/Knifa
-https://github.com/druckgott
+https://github.com/fpv-wtf<br/>
+https://github.com/Knifa<br/>
+https://github.com/druckgott<br/>
 
 <p align="right"><a href="#readme-top">[back to top]</a></p>
