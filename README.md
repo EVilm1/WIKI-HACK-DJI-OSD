@@ -62,7 +62,7 @@
       </ul>
     </li>
     <li><a href="#4-splashscreen--screensaver-wtfos">Splashscreen & Screensaver WTFOS</a></li>
-    <li><a href="5-les-fonts-msp-osd">Les Fonts MSP-OSD</a></li>
+    <li><a href="#5-les-fonts-msp-osd">Les Fonts MSP-OSD</a></li>
     <li> <a href="#6-config-avancée--modifier-les-éléments-de-lhud-dji">(Config avancée) : Modifier les éléments de l'HUD DJI</a>
       <ul>
         <li><a href="#modifier-lemplacement-des-éléments-de-lhud-dji">Modifier l'emplacement des éléments de l'HUD DJI</a></li>
