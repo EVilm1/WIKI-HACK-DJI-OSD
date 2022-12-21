@@ -1,20 +1,11 @@
 <a name="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( )
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/4q5srBqn89)
 [![VSCode](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads)
 [![Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?logo=adobephotoshop&logoColor=fff&style=for-the-badge)](https://www.adobe.com/fr/products/photoshop.html)
 [![XDA](https://img.shields.io/badge/xda%20developers-2DAAE9?style=for-the-badge&logo=xda-developers&logoColor=white)](https://forum.xda-developers.com/)
 [![Terminal](https://img.shields.io/badge/windows%20terminal-4D4D4D?style=for-the-badge&logo=windows%20terminal&logoColor=white)]()
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -37,7 +28,6 @@
     <a href="https://fpv.wtf/"><strong>WTFOS Configurator</strong></a>
   </p>
 </div>
-
 
 <!-- TABLE OF CONTENTS -->
 
@@ -78,8 +68,6 @@
     <li><a href="#7-config-avancée-générer-sa-propre-font-pour-msp-osd">(Config avancée) Générer sa propre Font pour MSP-OSD</a></li>
   </ol>
 </details>
-
-
 
 <!-- INTRO -->
 # Intro
@@ -125,6 +113,7 @@ Le logiciel [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dji
 
 <!-- SERIALPORTS CONFIG -->
 ## Configurer les ports
+
 Une fois le masque rooté il faut configurer les ports sur Betaflight. Exécuter ce code dans le ``CLI`` de **BetaFlight-Configurator** :
 ```
 set osd_displayport_device = MSP
