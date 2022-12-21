@@ -91,7 +91,7 @@ Voici un exemple avant/après de ce qu'il est possible de faire : (J'ai remplac�
 |-------|-------|
 |<img src="img/before.png" width="600">|<img src="img/myosd.png" width="600">|
 
-Un exemple vidéo : (l'osd DJI à été rajouté sur la vidéo pour l'exemple)<br />
+Un exemple vidéo (l'osd DJI à été rajouté sur la vidéo pour l'exemple) :<br />
 
 https://user-images.githubusercontent.com/51506790/208981180-be9528f5-7118-47d3-8a71-b43425f159c6.mp4
 
@@ -187,7 +187,7 @@ Les fichiers de police se composent en 4 fichiers ``.bin`` à placer à la racin
 Dans notre exemple avec Betaflight j'ai : ``font_bf.bin``, ``font_bf_2.bin``,	``font_bf_hd.bin`` et ``font_bf_hd_2.bin``.<br/>
 Si ``FakeHD`` n'est pas installé, il vous faut les 4 fichiers, sinon les deux derniers sont suffisants.
 
-Il existe plusieurs polices déja créées par moi ou d'autres utilisateurs très sympatiques :
+Il existe plusieurs polices déja créées (par moi ou d'autres utilisateurs très sympatiques) :
 
  - [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font)
  - [KNIFA's Material](https://github.com/Knifa/material-osd)
@@ -242,7 +242,7 @@ Nous pouvons également récupérer ce fichier dans la sauvegarde mais il est pr
 Une fois le fichier récupéré, ouvrez-le avec votre éditeur de code préféré.
 
 ### Prévisualisation script Python
-Pour nous aider à visualiser les éléments du masque virtuellement nous pouvons utiliser le script python de [Druckgott](https://github.com/druckgott/dji_stuff/tree/581dcb42ac6aa2f282d7b5c5085d97d4312492bd). Télécharger le ZIP contenant ``show_xml.py`` depuis sa page principale puis décompresser le fichier dans le même répertoire que ``racing_chnl_osd_win.xml``.<br/>
+Pour nous aider à visualiser les éléments du masque virtuellement nous pouvons utiliser le script python de [Druckgott](https://github.com/druckgott/dji_stuff/tree/581dcb42ac6aa2f282d7b5c5085d97d4312492bd). Téléchargez le ZIP contenant ``show_xml.py`` depuis sa page principale puis décompressez le fichier dans le même répertoire que ``racing_chnl_osd_win.xml``.<br/>
 Téléchargez et installez la dernière version de python [ici](https://www.python.org/downloads/).<br/> Pour éxecuter le fichier python, ouvrez un terminal ou Powershell, accédez au répertoire contenant ``show_xml.py`` puis exécuter :
 ```
 python.exe show_xml.py -i racing_chnl_osd_win.xml
@@ -266,6 +266,8 @@ Sauvegarder le fichier, puis actualiser la prévisualisation ``show_xml.py`` pou
 
 ℹ️ On notera la présence d'une icône nommée ``gs_battery_icon`` et d'un paramètre de ``gs_voltage`` nommé ``font.name`` qui sera détaillé plus tard dans cette doc.
 
+ℹ️ Le fichier XML que j'ai modifié et que j'ai utilisé dans les exemples au début de la doc est disponible [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml)
+
 Enfin, une fois les changements effectués, pour uploader ``racing_chnl_osd_win.xml`` dans le masque, avec ``ADB`` exécuter :
 ```
 adb push [cible]/racing_chnl_osd_win.xml /system/gui/xml/
@@ -273,7 +275,7 @@ adb push [cible]/racing_chnl_osd_win.xml /system/gui/xml/
 Remplacez [cible] par le répertoire contenant votre fichier ``.xml``.<br/>
 (Cela aura pour effet d'écraser ``racing_chnl_osd_win.xml`` présent sur le masque, d'où l'importance de la sauvegarde)
 
-Redémarrer le masque pour appliquer les changements.<br/>
+Redémarrer le masque pour appliquer les changements.<br/><br/>
 ⚠️ Si deux éléments se touchent, si un bloc est mal écrit ou incomplet, alors l'élement ne s'affichera pas ou même le masque n'arrivera pas à charger l'osd et risque de redémarrer en boucle.
 
 ## Modifier la police de l'``HUD DJI``
@@ -335,6 +337,8 @@ Un OSD de qualité demande du temps, bonne chance !<br/>
 https://github.com/fpv-wtf<br/>
 https://github.com/Knifa<br/>
 https://github.com/druckgott<br/>
+Merci à Sneaky-fpv : https://sites.google.com/view/sneaky-fpv/home
+Merci à Motard Geek et à son article : https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/
 
 If this doc helped you and you liked it, you can buy me a coffee 😉 : https://www.buymeacoffee.com/evilm1
 
