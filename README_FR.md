@@ -95,7 +95,7 @@ Un exemple vidéo (l'osd DJI à été rajouté sur la vidéo pour l'exemple) :<b
 
 https://user-images.githubusercontent.com/51506790/208981180-be9528f5-7118-47d3-8a71-b43425f159c6.mp4
 
-ℹ️ Les infos ici relèvent de ma propre expérience, toutes les <a href="#readme-top">sources</a> sont citées en haut du doc.<br />
+ℹ️ Les infos ici relèvent de ma propre expérience, toutes les <a href="#readme-top">sources</a> sont citées en haut ou en bas du doc.<br />
 ⚠️ Les manipulations peuvent comporter des risques (infimes si correctement réalisés), vous êtes les seuls responsables des agissements sur votre matériel.
 
 <!-- INSTALL WTFOS -->
