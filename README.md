@@ -336,12 +336,14 @@ python3 template2img.py [NomDeVotreImage].png
 4 fichiers ``.bin`` ont été générés à la racine du dossier. Les renommer en ``font_bf.bin``, ``font_bf_2.bin``,	``font_bf_hd.bin``, ``font_bf_hd_2.bin`` (pour Betaflight uniquement).
 Enfin, utiliser uniquement ``font_bf_hd.bin`` et ``font_bf_hd_2.bin`` si [FakeHD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#3-fakehd) est installé, sinon les 4.
 
-Un OSD de qualité demande du temps, bonne chance ! 😉
+Un OSD de qualité demande du temps, bonne chance !<br/>
 
 ## Sources / Remerciements
 
 https://github.com/fpv-wtf<br/>
 https://github.com/Knifa<br/>
 https://github.com/druckgott<br/>
+
+If this doc helped you and you liked it, you can buy me a coffee 😉 : https://www.buymeacoffee.com/evilm1
 
 <p align="right"><a href="#readme-top">[back to top]</a></p>
