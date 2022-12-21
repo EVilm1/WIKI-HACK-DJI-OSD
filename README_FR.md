@@ -187,7 +187,7 @@ Les fichiers de police se composent en 4 fichiers ``.bin`` à placer à la racin
 Dans notre exemple avec Betaflight j'ai : ``font_bf.bin``, ``font_bf_2.bin``,	``font_bf_hd.bin`` et ``font_bf_hd_2.bin``.<br/>
 Si ``FakeHD`` n'est pas installé, il vous faut les 4 fichiers, sinon les deux derniers sont suffisants.
 
-Il existe plusieurs polices déja générées créées par des fans :
+Il existe plusieurs polices déja créées par moi ou d'autres utilisateurs très sympatiques :
 
  - [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font)
  - [KNIFA's Material](https://github.com/Knifa/material-osd)
