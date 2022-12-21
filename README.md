@@ -200,7 +200,7 @@ Il existe plusieurs polices déja générées créées par des fans :
  - [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font)
  - [KNIFA's Material](https://github.com/Knifa/material-osd)
  - [Shannon Baker](https://drive.google.com/drive/folders/1buxrXqhU46AxE3fwaFDsMb97IiGLVa95)
- - [Sneaky FPV's Sphere for Betaflight](https://drive.google.com/file/d/1f7CBK9DV-8EYc_Xt7IezKdUaECgADdUw/view)
+ - [SNEAKY_FPV's colour fonts for INAV, ARDU and BF](https://sites.google.com/view/sneaky-fpv/home)
  - [VICEWIZE Italic](https://github.com/vicewize/vicewizeosdfontset)
 
 Pour une configuration différente ou plus de paramètres voir la [doc officielle de MSP-OSD](https://github.com/fpv-wtf/msp-osd#choose-a-font).
