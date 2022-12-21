@@ -1,0 +1,208 @@
+<mmsdialog>
+	<rootwindow name="racing_osd_win" w="100%" h="100%" bgcolor="#00000000" alignment="center" show="false">
+		<childwindow name="custom_osd_win" dx="0px" dy="0px" w="1440px" h="40px" alignment="top-left" show="false"
+			focusable="false" bgcolor="#00000000">
+			<hbox>
+				<gap size= "150px" />
+				<image name="battery_icon" size="48px" image.name="custom_osd_ic.png" />
+				<gap size="12px" />
+				<label name="custom_voltage" size="90px" font.name="WM150font.ttf" text="---" color="#fffffff2" font.size="28" alignment="center" />
+				<gap size="20px" />
+				<label name="custom_amperage" size="100px" font.name="WM150font.ttf" text="---" color="#fffffff2" font.size="28" alignment="center" />
+				<gap size= "100px" />
+				<label name="craft_name" size="300px" font.name="WM150font.ttf" text="CRAFT_NAME" color="#ffffffff" font.size="28" alignment="left" />
+				<gap size="20px" />
+				<label name="uav_rec_time" size="100px" font.name="WM150font.ttf" text="00&apos; 00&quot;" color="#fffffff2" font.size="28" alignment="center" />
+				<gap size="20px" />
+				<label name="gls_rec_time" size="100px" font.name="conthrax-sb.ttf" text="00&apos; 00&quot;" color="#fffffff2" font.size="28" alignment="center" />
+				<gap size="20px" />
+				<label name="arming_flags" size="250px" font.name="WM150font.ttf" text="" color="#fffffff2" font.size="28" alignment="center" />
+				<gap />
+			</hbox>
+		</childwindow>
+		<childwindow name="racing_rc_signal_win" dx="800px" dy="685px" w="100px" h="48px" alignment="top-left" show="false"
+			focusable="false" bgcolor="#00000000">
+			<hbox>
+			<vbox size="76px">
+				<gap />
+				<hbox size="32px">
+					<image name="rc_icon" size="32px" image.name="osd_ic_remote_controller.png" alignment = "center" />
+					<gap size="4px" />
+					<image name="rc_signal" size="40px" image.name="osd_ic_signal_none.png" alignment="center" />
+				</hbox>
+				<gap />
+			</vbox>
+			</hbox>
+		</childwindow>
+		<childwindow name="racing_player_win" dx="475px" dy="705px" w="190px" h="48px" alignment="top-left" show="true"
+			focusable="false" bgcolor="#00000000">
+			<hbox>
+			<vbox size="76px">
+				<gap />
+				<hbox size="32px">
+					<image name="player_icon" size="32px" image.name="osd_ic_aircraftchannel.png" alignment = "center" />
+					<gap size="4px" />
+					<image name="player_signal" size="35px" image.name="osd_ic_signal_none.png" alignment="center" />
+				</hbox>
+				<gap />
+			</vbox>
+			<gap size="6px" />
+				<label name="player_No" size="70px" font.name="conthrax-sb.ttf" text="" color="#ffffffff" font.size="24" alignment="left" />
+			</hbox>
+		</childwindow>
+		<childwindow name="racing_audience_win" dx="24px" dy="746px" w="170px" h="48px" alignment="top-left" show="false"
+			focusable="false" bgcolor="#00000000">
+			<hbox>
+			<vbox size="32px">
+				<gap />
+				<hbox size="32px">
+				<image name="audience_icon" size="24px" image.name="osd_ic_audience.png" alignment = "center" />
+				</hbox>
+				<gap />
+			</vbox>
+			<gap size="6px" />
+				<label name="audience_No" size="70px" font.name="conthrax-sb.ttf" text="" color="#ffffffff" font.size="24" alignment="left" />
+			</hbox>
+		</childwindow>
+		<childwindow name="racing_delay_osd_win" dx="795px" dy="705px" w="120px" h="48px" alignment="top-left" show="true"
+			focusable="false" bgcolor="#00000000">
+			<label name="delay" size="116px" font.name="conthrax-sb.ttf" text="..." color="#fffffff2" font.size="24" alignment="right" />
+		</childwindow>
+		<childwindow name="racing_kbps_osd_win" dx="600px" dy="705px" w="200px" h="48px" alignment="top-left" show="true"
+			focusable="false" bgcolor="#00000000">
+			<label name="kbps" size="180px" font.name="conthrax-sb.ttf" text="..." color="#fffffff2" font.size="24" alignment="right" />
+		</childwindow>
+		<childwindow name="racing_fc_osd_win" dx="1620px" dy="75px" w="280px" h="48px" alignment="top-left" show="true"
+			focusable="false" bgcolor="#00000000">
+			<hbox>
+				<vbox size="32px">
+				<gap />
+				<hbox size="32px">
+					<image name="uav_battery_icon" size="32px" image.name="osd_ic_aircraftbattery_normal.png" />
+				</hbox>
+				<gap />
+				</vbox>
+				<gap size="4px" />
+				<label name="voltage" size="80px" font.name="WM150font.ttf" text="..." color="#fffffff2" font.size="28" alignment="center" />
+				<gap size="25px" />
+				<label name="time" size="100px" font.name="WM150font.ttf" text="00&apos; 00&quot;" color="#fffffff2" font.size="28" alignment="center" />
+			</hbox>
+		</childwindow>
+		<childwindow name="racing_gs_voltage_win" dx="1300px" dy="746px" w="120px" h="48px" alignment="top-left" show="true"
+			focusable="false" bgcolor="#00000000">
+			<hbox>
+				<vbox size="32px">
+				<gap />
+				<hbox size="32px">
+					<image name="gs_battery_icon" size="32px" useratio="true" image.name="osd_ic_glassesbattery_normal.png" />
+				</hbox>
+				<gap />
+				</vbox>
+				<gap size="8px" />
+				<label name="gs_voltage" size="80px" font.name="conthrax-sb.ttf" text="..." color="#fffffff2" font.size="24" alignment="center" />
+			</hbox>
+		</childwindow>
+		<childwindow name="uav_rec_win" dx="1291px" dy="160px" w="104px" h="32px" alignment="top-left" show="false" focusable="false"
+			bgcolor="#00000000">
+			<hbox>
+				<image name="uav_rec" image.name="basic_img_rec_aircraft.png"
+							selimage.name="basic_img_rec_aircraft.png"/>
+			</hbox>
+		</childwindow>
+		<childwindow name="gnd_rec_win" dx="1291px" dy="220px" w="104px" h="32px" alignment="top-left" show="false" focusable="false"
+			bgcolor="#00000000">
+			<hbox>
+				<image name="gnd_rec" image.name="basic_img_rec_glasses.png"
+							selimage.name="basic_img_rec_glasses.png"/>
+			</hbox>
+		</childwindow>
+		<childwindow name="uav_sd_win" dx="1291px" dy="160px" w="140px" h="32px" alignment="top-left" show="true" focusable="false"
+			bgcolor="#00000000">
+			<vbox>
+			<gap />
+			<hbox size="32px">
+				<image size="32px" name="uav_sd" image.name=""
+					selimage.name=""/>
+				<gap size="8px" />
+				<label name="uav_sd_status" size="90px" font.name="conthrax-sb.ttf" text="" color="#ffffffff" font.size="15" alignment="left" />
+			</hbox>
+			<gap />
+			</vbox>
+		</childwindow>
+		<childwindow name="gnd_sd_win" dx="1291px" dy="220px" w="140px" h="32px" alignment="top-left" show="true" focusable="false"
+			bgcolor="#00000000">
+			<vbox>
+			<gap />
+			<hbox size="32px">
+				<image size="32px" name="gnd_sd" image.name=""
+					selimage.name=""/>
+				<gap size="8px" />
+				<label name="gnd_sd_status" size="90px" font.name="conthrax-sb.ttf" text="" color="#ffffffff" font.size="15" alignment="left" />
+			</hbox>
+			<gap />
+			</vbox>
+		</childwindow>
+		<childwindow name="sd_prompt_osd_win" dx="-24px" dy="-444px" w="332px" h="80px" alignment="bottom-right" show="false" focusable="false"
+			bgcolor="#0D0D0D99">
+			<vbox>
+			<gap />
+			<hbox size="80px">
+				<gap />
+				<textbox name="sd_prompt" size="300px" class="RobotoCondensedBoldTextBoxClass" text="N/A" color= "#FFFFFFCC" font.size="20"
+				alignment="left" selectable="false" use_font_size="false"/>
+				<gap />
+			</hbox>
+			<gap />
+			</vbox>
+		</childwindow>
+
+		<childwindow name="racing_device_active_osd_win" dx="0px" dy="0px" w="648px" h="410px" alignment="center" show="false" focusable="false"
+			bgcolor="#000000CC">
+		<vbox>
+			<hbox size="170px">
+		        <gap />
+			<textbox name="hintlabel_value" size="648px" text="msg_not_active_toast_glass" alignment="bottom-center" class="RobotoCondensedBoldTextBoxClass"
+				font.size="28" selectable="false" use_font_size="true" bgcolor="#000000CC"/>
+		        <gap />
+			</hbox>
+			<gap size="24px" />
+			<hbox size="152px">
+		        <gap />
+			<textbox name="toast_value" size="552px" text="msg_not_active_toast" alignment="top-center" class="RobotoCondensedBoldTextBoxClass"
+				font.size="24" selectable="false" use_font_size="true" bgcolor="#000000CC"/>
+		        <gap />
+			</hbox>
+			<hbox size="4px">
+		        <gap />
+			<textbox name="blank_line" size="648px" text="" alignment="top-center" class="RobotoCondensedBoldTextBoxClass"
+				font.size="24" selectable="false" use_font_size="true" bgcolor="#555555AA" />
+		        <gap />
+			</hbox>
+			<gap size="12px"/>
+			<hbox size="36px">
+		        <gap />
+			<textbox name="toast_value" size="648px" text="msg_not_active_quit_toast" alignment="center" class="RobotoCondensedBoldTextBoxClass"
+				font.size="24" selectable="false" use_font_size="true" bgcolor="#000000CC"/>
+		        <gap />
+			</hbox>
+			<gap size="12px"/>
+		<gap />
+		</vbox>
+		</childwindow>
+
+            <hbox size="81px">
+                <vbox size="1440px">
+                    <childwindow name="subline_win" dx="0px" dy="0px" w="1440px" h="810px" alignment="top-left" own_surface="false" show="true"
+                        bgcolor="#00000000" focusable="false" selectable="false">
+                        <vbox>
+                            <hbox size="810px">
+                                <surface size="1440px" name="subline_surf" bgcolor="#00000000"/>
+                            </hbox>
+                        </vbox>
+                    </childwindow>
+                </vbox>
+                <gap/>
+            </hbox>
+            <gap/>
+</rootwindow>
+</mmsdialog>
