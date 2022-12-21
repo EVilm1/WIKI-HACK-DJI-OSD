@@ -17,9 +17,8 @@
   <h3 align="center">WIKI HACK DJI OSD</h3>
 
   <p align="center">
-    ✨ Personnalisez votre OSD ✨<br />
-    English version soon !!
-    <br />
+    <a href="https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README.md"><strong>English version HERE</strong></a><br />
+    ✨ Customize your OSD ✨<br />
     <br />
     <a href="https://github.com/fpv-wtf/wtfos"><strong>Wiki WTFOS</strong></a>
     ·
@@ -36,68 +35,68 @@
   <ol>
     <li><a href="#Intro">Intro</a>
       <ul>
-        <li><a href="#Exemple">Exemple</a></li>
+        <li><a href="#Exemple">Example</a></li>
       </ul>
     </li>
   </ol>
   <ol>
-    <li><a href="#1-installer-wtfos">Installer WTFOS</a>
+    <li><a href="#1-installer-wtfos">Install WTFOS</a>
       <ul>
-        <li><a href="#configurer-les-ports">Configurer les ports</a></li>
+        <li><a href="#configurer-les-ports">Configure ports</a></li>
       </ul>
     </li>
-    <li><a href="#2-déplacer-les-élements-de-msp-osd">Déplacer les élements de MSP-OSD</a></li>
+    <li><a href="#2-déplacer-les-élements-de-msp-osd">Move elements of MSP-OSD</a></li>
     <li><a href="#3-fakehd">FakeHD</a></li>
       <ul>
-        <li><a href="#activer-et-configurer-fakehd">Activer et configurer FakeHD</a></li>
+        <li><a href="#activer-et-configurer-fakehd">Enable and configure FakeHD</a></li>
       </ul>
     </li>
     <li><a href="#4-splashscreen--screensaver-wtfos">Splashscreen & Screensaver WTFOS</a></li>
-    <li><a href="#5-les-fonts-msp-osd">Les Fonts MSP-OSD</a></li>
-    <li> <a href="#6-config-avancée--modifier-les-éléments-de-lhud-dji">(Config avancée) : Modifier les éléments de l'HUD DJI</a>
+    <li><a href="#5-les-fonts-msp-osd">MSP-OSD Fonts</a></li>
+    <li> <a href="#6-config-avancée--modifier-les-éléments-de-lhud-dji">(Advanced config): Modify the DJI HUD elements</a>
       <ul>
-        <li><a href="#modifier-lemplacement-des-éléments-de-lhud-dji">Modifier l'emplacement des éléments de l'HUD DJI</a></li>
+        <li><a href="#modifier-lemplacement-des-éléments-de-lhud-dji">Move the DJI HUD elements</a></li>
           <ul>
-            <li><a href="#prévisualisation-script-python">Prévisualisation script Python</a></li>
-            <li><a href="#modifier-le-fichier-xml">Modifier le fichier .xml</a></li>
+            <li><a href="#prévisualisation-script-python">Python script preview</a></li>
+            <li><a href="#modifier-le-fichier-xml">Edit the .xml file</a></li>
           </ul>
-        <li><a href="#modifier-la-police-de-lhud-dji">Modifier la police de l'HUD DJI</a></li>
-        <li><a href="#modifier-les-ic%C3%B4nes-de-lhud-dji">Modifier les icones de l'HUD DJI</a></li>
+        <li><a href="#modifier-la-police-de-lhud-dji">Change the font of the DJI HUD</a></li>
+        <li><a href="#modifier-les-ic%C3%B4nes-de-lhud-dji">Change the DJI HUD icons</a></li>
       </ul>
     </li>
-    <li><a href="#7-config-avancée-générer-sa-propre-font-pour-msp-osd">(Config avancée) Générer sa propre Font pour MSP-OSD</a></li>
+    <li><a href="#7-config-avancée-générer-sa-propre-font-pour-msp-osd">(Advanced config): Generate your own Font for MSP-OSD</a></li>
   </ol>
 </details>
 
 <!-- INTRO -->
 # Intro
 
-Cette documentation explique en détails comment modifier votre OSD dans votre masque DJI.
-Les exemples suivants seront réalisés avec le combo **DJI Googles V2 / Betaflight**.
+This documentation explains in detail how to modify your OSD in your DJI Googles.
+The following examples will be made with the **DJI Googles V2 / Betaflight** combo.
 
-Pour poser les bases, il faut bien différencier les termes suivants :
-* **``OSD Betaflight :``** C'est l'osd classique à la sortie de Betaflight, c'est celui que l'on retrouve généralement dans des lunettes analogiques.
-* **``HUD DJI / CUSTOM OSD :``** Comme l'osd Betaflight, mais traduis par DJI, c'est l'osd par défaut des DJI Googles. Cette fonctionnalité porte également le nom de "Custom OSD" dans les paramètres du masque et présente des défauts car n'utilise pas à 100% les infos reçues   de Betaflight.
-* **``WTFOS MSP-OSD :``** Le package MSP-OSD est installé grâce au hack WTFOS, il remplace le HUD DJI et permet de nouvelles fonctionnalités.
+In order to understand, it is necessary to establish the basics, it is necessary to differentiate the following terms:
+* **``OSD Betaflight :``** This is the classic osd at the release of Betaflight, it is the one usually found in analog goggles.
+* **``HUD DJI / CUSTOM OSD :``** Like the Betaflight osd, but interpreted by DJI, this is the default osd for DJI Googles. This feature is also called "Custom OSD" in the googles settings and is flawed because it does not use 100% of the information received from Betaflight.
+* **``WTFOS MSP-OSD :``** The MSP-OSD package is installed through the WTFOS hack, it replaces the DJI HUD and allows new features.
 
 <!-- EXEMPLE -->
-## Exemple
+## Example
 
-Nous allons donc faire un mix entre **``MSP-OSD``** pour toutes les infos à la sortie de Betaflight et le **``HUD DJI``** pour toutes les autres infos qui ne sortent pas de Betaflight (Ex : La batterie du masque, la qualité du lien VTX, la latence VTX...)
+We are going to make a mix between **``MSP-OSD``** for all the information at the output of Betaflight and the **``HUD DJI``** for all the other information which do not leave Betaflight (Ex: The battery of the googles, the quality of the VTX link, the VTX latency...)
 
-Nous verrons également comment modifier l'emplacement des éléments du HUD DJI, modifier la police du HUD DJI, créer une nouvelle police pour MSP-OSD... 
+We will also see how to change the location of the DJI HUD elements, change the DJI HUD font, create a new font for MSP-OSD... 
 
-Voici un exemple avant/après de ce qu'il est possible de faire : (J'ai remplacé l'image et c'est ma dernière version à ce jour !)<br />
-| Avant (**MSP-OSD seul**) | Après (**MSP-OSD + FakeHD + HUD DJI Custom + Fonts Custom**) |
+Here is a before/after example of what it is possible to do: (I updated the screenshots and this is my last version to date!)<br />
+| Before (**MSP-OSD only**) | After (**MSP-OSD + FakeHD + Custom HUD DJI + Custom Fonts**) |
 |-------|-------|
 |<img src="img/before.png" width="600">|<img src="img/myosd.png" width="600">|
 
-Un exemple vidéo : (l'osd DJI à été rajouté sur la vidéo pour l'exemple)<br />
+A video example (the DJI HUD has been added on the video for the example) :<br />
 
 https://user-images.githubusercontent.com/51506790/208981180-be9528f5-7118-47d3-8a71-b43425f159c6.mp4
 
-ℹ️ Les infos ici relèvent de ma propre expérience, toutes les <a href="#readme-top">sources</a> sont citées en haut du doc.<br />
-⚠️ Les manipulations peuvent comporter des risques (infimes si correctement réalisés), vous êtes les seuls responsables des agissements sur votre matériel.
+ℹ️ The info here is from my own experience, all <a href="#readme-top">sources</a> are quoted at the top or bottom of the doc.<br />
+⚠️ The manipulations can involve risks (tiny if correctly done), you are the only ones responsible for the actions on your material.S
 
 <!-- INSTALL WTFOS -->
 # 1. Installer WTFOS
@@ -188,7 +187,7 @@ Les fichiers de police se composent en 4 fichiers ``.bin`` à placer à la racin
 Dans notre exemple avec Betaflight j'ai : ``font_bf.bin``, ``font_bf_2.bin``,	``font_bf_hd.bin`` et ``font_bf_hd_2.bin``.<br/>
 Si ``FakeHD`` n'est pas installé, il vous faut les 4 fichiers, sinon les deux derniers sont suffisants.
 
-Il existe plusieurs polices déja générées créées par des fans :
+Il existe plusieurs polices déja créées (par moi ou d'autres utilisateurs très sympatiques) :
 
  - [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font)
  - [KNIFA's Material](https://github.com/Knifa/material-osd)
@@ -243,7 +242,7 @@ Nous pouvons également récupérer ce fichier dans la sauvegarde mais il est pr
 Une fois le fichier récupéré, ouvrez-le avec votre éditeur de code préféré.
 
 ### Prévisualisation script Python
-Pour nous aider à visualiser les éléments du masque virtuellement nous pouvons utiliser le script python de [Druckgott](https://github.com/druckgott/dji_stuff/tree/581dcb42ac6aa2f282d7b5c5085d97d4312492bd). Télécharger le ZIP contenant ``show_xml.py`` depuis sa page principale puis décompresser le fichier dans le même répertoire que ``racing_chnl_osd_win.xml``.<br/>
+Pour nous aider à visualiser les éléments du masque virtuellement nous pouvons utiliser le script python de [Druckgott](https://github.com/druckgott/dji_stuff/tree/581dcb42ac6aa2f282d7b5c5085d97d4312492bd). Téléchargez le ZIP contenant ``show_xml.py`` depuis sa page principale puis décompressez le fichier dans le même répertoire que ``racing_chnl_osd_win.xml``.<br/>
 Téléchargez et installez la dernière version de python [ici](https://www.python.org/downloads/).<br/> Pour éxecuter le fichier python, ouvrez un terminal ou Powershell, accédez au répertoire contenant ``show_xml.py`` puis exécuter :
 ```
 python.exe show_xml.py -i racing_chnl_osd_win.xml
@@ -267,6 +266,8 @@ Sauvegarder le fichier, puis actualiser la prévisualisation ``show_xml.py`` pou
 
 ℹ️ On notera la présence d'une icône nommée ``gs_battery_icon`` et d'un paramètre de ``gs_voltage`` nommé ``font.name`` qui sera détaillé plus tard dans cette doc.
 
+ℹ️ Le fichier XML que j'ai modifié et que j'ai utilisé dans les exemples au début de la doc est disponible [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml)
+
 Enfin, une fois les changements effectués, pour uploader ``racing_chnl_osd_win.xml`` dans le masque, avec ``ADB`` exécuter :
 ```
 adb push [cible]/racing_chnl_osd_win.xml /system/gui/xml/
@@ -274,7 +275,7 @@ adb push [cible]/racing_chnl_osd_win.xml /system/gui/xml/
 Remplacez [cible] par le répertoire contenant votre fichier ``.xml``.<br/>
 (Cela aura pour effet d'écraser ``racing_chnl_osd_win.xml`` présent sur le masque, d'où l'importance de la sauvegarde)
 
-Redémarrer le masque pour appliquer les changements.<br/>
+Redémarrer le masque pour appliquer les changements.<br/><br/>
 ⚠️ Si deux éléments se touchent, si un bloc est mal écrit ou incomplet, alors l'élement ne s'affichera pas ou même le masque n'arrivera pas à charger l'osd et risque de redémarrer en boucle.
 
 ## Modifier la police de l'``HUD DJI``
@@ -336,6 +337,8 @@ Un OSD de qualité demande du temps, bonne chance !<br/>
 https://github.com/fpv-wtf<br/>
 https://github.com/Knifa<br/>
 https://github.com/druckgott<br/>
+Merci à Sneaky-fpv : https://sites.google.com/view/sneaky-fpv/home<br/>
+Merci à Motard Geek et à son article : https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/<br/>
 
 If this doc helped you and you liked it, you can buy me a coffee 😉 : https://www.buymeacoffee.com/evilm1
 
