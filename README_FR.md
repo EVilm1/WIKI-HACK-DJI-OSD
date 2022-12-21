@@ -17,9 +17,8 @@
   <h3 align="center">WIKI HACK DJI OSD</h3>
 
   <p align="center">
+    <a href="https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README.md"><strong>English version HERE</strong></a><br />
     ✨ Personnalisez votre OSD ✨<br />
-    English version soon !!
-    <br />
     <br />
     <a href="https://github.com/fpv-wtf/wtfos"><strong>Wiki WTFOS</strong></a>
     ·
