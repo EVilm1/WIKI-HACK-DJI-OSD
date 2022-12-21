@@ -26,7 +26,8 @@
   <h3 align="center">WIKI HACK DJI OSD</h3>
 
   <p align="center">
-    ✨ Personnalisez votre OSD ✨
+    ✨ Personnalisez votre OSD ✨<br />
+    English version soon !!
     <br />
     <br />
     <a href="https://github.com/fpv-wtf/wtfos"><strong>Wiki WTFOS</strong></a>
