@@ -101,7 +101,7 @@ Nous verrons également comment modifier l'emplacement des éléments du HUD DJI
 Voici un exemple avant/après de ce qu'il est possible de faire : (De meilleures immages arrivent bientot !)<br />
 | Avant (**MSP-OSD seul**) | Après (**MSP-OSD + FakeHD + HUD DJI Custom + Fonts Custom**) |
 |-------|-------|
-|<img src="img/before.png" width="600">|<img src="img/after.png" width="600">|
+|<img src="img/before.png" width="600">|<img src="img/myosd.png" width="600">|
 
 
 ℹ️ Les infos ici relèvent de ma propre expérience, toutes les <a href="#readme-top">sources</a> sont citées en haut du doc.<br />
