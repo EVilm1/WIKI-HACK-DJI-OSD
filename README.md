@@ -75,9 +75,9 @@ This documentation explains in detail how to modify your OSD in your DJI Googles
 The following examples will be made with the **DJI Googles V2 / Betaflight** combo.
 
 In order to understand, it is necessary to establish the basics, it is necessary to differentiate the following terms:
-* **``OSD Betaflight :``** This is the classic osd at the release of Betaflight, it is the one usually found in analog goggles.
-* **``HUD DJI / CUSTOM OSD :``** Like the Betaflight osd, but interpreted by DJI, this is the default osd for DJI Googles. This feature is also called "Custom OSD" in the googles settings and is flawed because it does not use 100% of the information received from Betaflight.
-* **``WTFOS MSP-OSD :``** The MSP-OSD package is installed through the WTFOS hack, it replaces the DJI HUD and allows new features.
+* **``OSD Betaflight:``** This is the classic osd at the release of Betaflight, it is the one usually found in analog goggles.
+* **``HUD DJI / CUSTOM OSD:``** Like the Betaflight osd, but interpreted by DJI, this is the default osd for DJI Googles. This feature is also called "Custom OSD" in the googles settings and is flawed because it does not use 100% of the information received from Betaflight.
+* **``WTFOS MSP-OSD:``** The MSP-OSD package is installed through the WTFOS hack, it replaces the DJI HUD and allows new features.
 
 <!-- EXEMPLE -->
 ## Example
@@ -96,34 +96,35 @@ A video example (the DJI HUD has been added on the video for the example) :<br /
 https://user-images.githubusercontent.com/51506790/208981180-be9528f5-7118-47d3-8a71-b43425f159c6.mp4
 
 ℹ️ The info here is from my own experience, all <a href="#readme-top">sources</a> are quoted at the top or bottom of the doc.<br />
-⚠️ The manipulations can involve risks (tiny if correctly done), you are the only ones responsible for the actions on your material.S
+⚠️ The manipulations can involve risks (tiny if correctly done), you are the only ones responsible for the actions on your material.
 
 <!-- INSTALL WTFOS -->
-# 1. Installer WTFOS
+# 1. Install WTFOS
 
-Avant toute manipulation, le masque doit être rooté, pour cela **WTFOS** doit être installé à l'aide de [WTFOS-Configurator](https://fpv.wtf/), tout est très bien expliqué dans [la doc officielle](https://github.com/fpv-wtf/wtfos) de fpv-wtf. Je vous conseille de chercher des tutos sur Youtube.
+Before any manipulation, the googles have to be rooted, for that **WTFOS** has to be installed with [WTFOS-Configurator](https://fpv.wtf/), everything is very well explained in [the official doc](https://github.com/fpv-wtf/wtfos) of fpv-wtf. I advise you to look for tutorials on Youtube.
 
 |![wtfos1](img/wtfos.png)|![wtfos2](img/wtfos2.png)|
 |-------|-------|
 
-⚠️ **IMPORTANT :** Avant de rooter le masque, assurez-vous que le masque et le VTX (Vista/AirUnit) sont dans la même version.<br />
+⚠️ **IMPORTANT:** Before rooting the googles, make sure that the googles and the VTX (Vista/AirUnit) are in the same version.<br />
 
-Le logiciel [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dji-assistant-2-dji-fpv-series) permet de checker la version, upgrade ou downgrade le firmware du masque et du VTX. La version **``v01.00.06.06``** dites **``"606"``** est la plus utilisée et celle qui convient le mieux.
+The software [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dji-assistant-2-dji-fpv-series) allows you to check the version, upgrade or downgrade the firmware of the googles and the VTX. The version **``v01.00.06.06`` known as **``"606"``** is the most used and the one that fits best.
 
 <!-- SERIALPORTS CONFIG -->
-## Configurer les ports
+## Configure ports
 
-Une fois le masque rooté il faut configurer les ports sur Betaflight. Exécuter ce code dans le ``CLI`` de **BetaFlight-Configurator** :
+Once the mask is rooted you have to configure the ports on Betaflight. Run this code in the **BetaFlight-Configurator** ``CLI`` :
 ```
 set osd_displayport_device = MSP
 set displayport_msp_serial = $
 set vcd_video_system = PAL
 save
 ```
-*Avec ``$``, le numéro de port VTX **- 1**.<br /> Exemple : le VTX est sur ``UART1``, donc ``displayport_msp_serial = 0``.*
+
+*With ``$``, the VTX port number **- 1**.<br /> Example: the VTX is on ``UART1``, so ``displayport_msp_serial = 0``.*
 
 <!-- MOVE MSP-OSD -->
-# 2. Déplacer les élements de MSP-OSD
+# 2. Move elements of MSP-OSD
 
 Une fois **MSP-OSD** installé (avec ports configurés sur Betaflight) nous pouvons maintenant désactiver le ``"Custom OSD"`` du masque DJI dans :
 ```
