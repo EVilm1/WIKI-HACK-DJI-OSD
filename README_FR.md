@@ -337,8 +337,8 @@ Un OSD de qualité demande du temps, bonne chance !<br/>
 https://github.com/fpv-wtf<br/>
 https://github.com/Knifa<br/>
 https://github.com/druckgott<br/>
-Merci à Sneaky-fpv : https://sites.google.com/view/sneaky-fpv/home
-Merci à Motard Geek et à son article : https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/
+Merci à Sneaky-fpv : https://sites.google.com/view/sneaky-fpv/home<br/>
+Merci à Motard Geek et à son article : https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/<br/>
 
 If this doc helped you and you liked it, you can buy me a coffee 😉 : https://www.buymeacoffee.com/evilm1
 
