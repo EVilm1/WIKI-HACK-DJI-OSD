@@ -15,6 +15,7 @@
   </a>
 
   <h3 align="center">WIKI HACK DJI OSD</h3>
+  --- English version almost finished! ---<br /><br />
 
   <p align="center">
     <a href="https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README_FR.md"><strong>Version Française ICI</strong></a><br />
@@ -33,38 +34,39 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#Intro">Intro</a>
+    <li><a href="#intro">Intro</a>
       <ul>
-        <li><a href="#Exemple">Example</a></li>
+        <li><a href="#example">Example</a></li>
       </ul>
     </li>
   </ol>
   <ol>
-    <li><a href="#1-installer-wtfos">Install WTFOS</a>
+    <li><a href="#1-install-wtfos">Install WTFOS</a>
       <ul>
-        <li><a href="#configurer-les-ports">Configure ports</a></li>
+        <li><a href="#configure-ports">Configure ports</a></li>
       </ul>
     </li>
-    <li><a href="#2-déplacer-les-élements-de-msp-osd">Move elements of MSP-OSD</a></li>
+    <li><a href="#2-move-elements-of-msp-osd">Move elements of MSP-OSD</a></li>
     <li><a href="#3-fakehd">FakeHD</a></li>
       <ul>
-        <li><a href="#activer-et-configurer-fakehd">Enable and configure FakeHD</a></li>
+        <li><a href="#enable-and-configure-fakehd">Enable and configure FakeHD</a></li>
       </ul>
     </li>
     <li><a href="#4-splashscreen--screensaver-wtfos">Splashscreen & Screensaver WTFOS</a></li>
-    <li><a href="#5-les-fonts-msp-osd">MSP-OSD Fonts</a></li>
-    <li> <a href="#6-config-avancée--modifier-les-éléments-de-lhud-dji">(Advanced config): Modify the DJI HUD elements</a>
+    <li><a href="#5-msp-osd-fonts">MSP-OSD Fonts</a></li>
+    <li> <a href="#6-advanced-setup-modify-the-dji-hud-elements">(Advanced config): Modify the DJI HUD elements</a>
       <ul>
-        <li><a href="#modifier-lemplacement-des-éléments-de-lhud-dji">Move the DJI HUD elements</a></li>
+        <li><a href="#move-the-dji-hud-elements">Move the DJI HUD elements</a></li>
           <ul>
-            <li><a href="#prévisualisation-script-python">Python script preview</a></li>
-            <li><a href="#modifier-le-fichier-xml">Edit the .xml file</a></li>
+            <li><a href="#python-script-to-preview">Python script to preview</a></li>
+            <li><a href="#edit-the-xml-file">Edit the .xml file</a></li>
           </ul>
-        <li><a href="#modifier-la-police-de-lhud-dji">Change the font of the DJI HUD</a></li>
-        <li><a href="#modifier-les-ic%C3%B4nes-de-lhud-dji">Change the DJI HUD icons</a></li>
+        <li><a href="#change-the-font-of-the-dji-hud">Change the font of the DJI HUD</a></li>
+        <li><a href="#change-the-dji-hud-icons">Change the DJI HUD icons</a></li>
       </ul>
     </li>
-    <li><a href="#7-config-avancée-générer-sa-propre-font-pour-msp-osd">(Advanced config): Generate your own Font for MSP-OSD</a></li>
+    <li><a href="#7-advanced-config-generate-your-own-font-for-msp-osd">(Advanced config): Generate your own Font for MSP-OSD</a></li>
+    <li><a href="#sources--credits">Sources / Credits</a></li>
   </ol>
 </details>
 
@@ -113,7 +115,7 @@ The software [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dj
 <!-- SERIALPORTS CONFIG -->
 ## Configure ports
 
-Once the mask is rooted you have to configure the ports on Betaflight. Run this code in the **BetaFlight-Configurator** ``CLI`` :
+Once the googles is rooted you have to configure the ports on Betaflight. Run this code in the **BetaFlight-Configurator** ``CLI`` :
 ```
 set osd_displayport_device = MSP
 set displayport_msp_serial = $
@@ -126,69 +128,70 @@ save
 <!-- MOVE MSP-OSD -->
 # 2. Move elements of MSP-OSD
 
-Une fois **MSP-OSD** installé (avec ports configurés sur Betaflight) nous pouvons maintenant désactiver le ``"Custom OSD"`` du masque DJI dans :
+Once **MSP-OSD** is installed (with ports configured on Betaflight) we can now disable the "Custom OSD" of the DJI googles in :
 ```
 Settings > Display > Custom OSD : off
 ```
-Nous avons maintenant l'OSD complet de Betaflight débloqué. Nous pouvons ajouter / supprimer / changer l'emplacement des éléments directement depuis la section ``OSD`` dans Betaflight :
+We now have the full OSD of Betaflight unlocked. We can add / remove / change the location of elements directly from the "OSD" section in Betaflight :
 
 ![osd betaflight](img/osd-betaflight.png)
 
-Nous remarquons que l'OSD Betaflight est obligatoirement dans un format 4:3. Peu importe le format que vous avez choisi pour votre VTX (4:3 ou 16:9) Betaflight ne peut pas afficher un osd plus large que le 4:3. Pour cela il existe une solution du nom de ``FakeHD`` grâce à WTFOS que nous allons détailler dans la section suivante.
+We note that the Betaflight OSD is necessarily in a 4:3 format. No matter what format you have chosen for your VTX (4:3 or 16:9) Betaflight cannot display an OSD wider than 4:3. For this there is a solution called ``FakeHD`` thanks to WTFOS which we will describe in detail in the next section.
 
 <!-- FAKEHD -->
 # 3. FakeHD
 
-``FakeHD`` est une solution pour afficher notre OSD dans un format 16:9. Pour comprendre comment le configurer il faut comprendre son fonctionnement :<br/>
-L'OSD Betaflight est une grille de 30 lignes et 16 colonnes. Il est impossible de "rajouter" des cases pour étirer le format 4:3 vers un format 16:9. Pour contourner ce probleme, ``FakeHD`` permet de déplacer des "blocs" du format 4:3 pour en faire un format 16:9.<br/>
-Explications pas très claires, schéma plus simple :
+``FakeHD`` is a solution to display our OSD in a 16:9 format. To understand how to set it up you need to understand how it works:<br/>
+The Betaflight OSD is a grid of 30 rows and 16 columns. It is impossible to "add" cells to stretch the 4:3 format to a 16:9 format. To get around this problem, ``FakeHD`` allows to move "blocks" of the 4:3 format to make a 16:9 format.<br/>
+Explanations not very clear, simpler scheme :
 
-| Avant (dans Betaflight Configurator) | Après avec ``FakeHD`` (dans le masque) |
+| Before (in Betaflight Configurator) | After with ``FakeHD`` (in the googles) |
 | -------|-------|
 |![FakeHD Before](/img/fakehd_before.png)|![FakeHD After](/img/fakehd_after.png)|
 
-Sur le schéma on voit les cases de couleur déplacées dans les angles et sur les côtés, mais il y a aussi des cases entièrement blanches. Comme dit plus haut, il est impossible de "rajouter" des cases, ces cases sont donc vides et il est impossible d'afficher des caractères dans les zones blanches.
+On the scheme you can see the colored cells moved to the corners and sides, but there are also completely white cells. As mentioned above, it is impossible to "add" cells, so these cells are empty and it is impossible to display characters in the white areas.
 
-Exemple simple pour mieux comprendre :
-| J'affiche l'élément "Avertissements" de Betaflight mal centré comme ceci :  | Résultat ``FakeHD`` |
+A simple example to better understand :
+| I display the "Warnings" element of Betaflight badly centered like this:  | ``FakeHD`` Result |
 | -------|-------|
 |![FakeHD Before](/img/osd-betaflight2.png)|![FakeHD After](/img/osd-betaflight3.png)|
 
-C'est un peu bizarre et il faut le prendre en compte quand on place les éléments dans Betaflight.<br/>
-Pour plus d'infos et de paramètres n'hésitez pas à vous rendre sur la [doc officielle de FakeHD](https://github.com/fpv-wtf/msp-osd#fakehd).
+This is a bit odd and should be taken into consideration when placing elements in Betaflight.<br/>
+For more info and settings please visit the [official FakeHD doc](https://github.com/fpv-wtf/msp-osd#fakehd).
 
 <!-- INSTALL FAKEHD -->
-## Activer et configurer **FakeHD**
+## Enable and configure **FakeHD**
 
-Pour activer ``FakeHD``, on connecte le masque à WTFOS [Configurator](https://fpv.wtf/), dans le ``CLI`` on exécute :
+To activate ``FakeHD``, connect the googles to WTFOS [Configurator](https://fpv.wtf/), in the ``CLI`` run :
 
 ```
 package-config set msp-osd fakehd_enable true
 package-config apply msp-osd
 ```
-C'est fini ``FakeHD`` est activé !<br/>
+That's it ``FakeHD`` is enabled!<br/>
 
-Malheureusement ça serait trop simple, en effet, à cause de l'exemple du texte coupé vu juste avant, l'écran de fin de vol (les stats) ne peut pas s'afficher correctement. Pour corriger ça, ``FakeHD`` est capable de s'activer pour le vol et se désactiver pour l'écran de fin grâce à un "caractère switch" (Si le caractère s'affiche à l'écran alors ``FakeHD`` s'active, sinon il se désactive).<br/>
-Ce "caractère switch" est paramétré par défaut sur le caractère "Thottle icon". Si vous ne voulez pas afficher ce caractère ou souhaitez changer, je vous laisse consulter [la doc](https://github.com/fpv-wtf/msp-osd#menu-switching---getting-rid-of-gaps-when-displaying-menu--post-flight-stats--displaying-centered) qui explique ça très bien.
+Unfortunately it would be too simple, because of the example of the cut text seen just before, the end of flight screen (the stats) cannot be displayed correctly. To correct this, ``FakeHD`` is able to turn on for the flight and turn off for the end screen thanks to a "character switch" (If the character is displayed on the screen then ``FakeHD`` turns on, otherwise it turns off).<br/>
+This "character switch" is set by default on the character "Throttle Position". If you don't want to display this character or want to change it, I let you read [the doc](https://github.com/fpv-wtf/msp-osd#menu-switching---getting-rid-of-gaps-when-displaying-menu--post-flight-stats--displaying-centered) which explains it very well.
+Personally, I use the crosshair icon (number 115) [in the doc again!](https://github.com/betaflight/betaflight/blob/master/docs/osd.md)
 
 <!-- WTFOS SPLASHSCREEN -->
 # 4. Splashscreen & Screensaver WTFOS
-Grâce à WTFOS nous pouvons changer l'écran de fond par défaut du masque DJI. pour cela nous devons avoir installé dans le [WTFOS-Configurator](https://fpv.wtf/) les packages ``image-changer`` et ``image-configurator`` :
+Thanks to WTFOS we can change the default background screen of the DJI googles. For this we need to have installed in the [WTFOS-Configurator](https://fpv.wtf/) the packages ``image-changer`` and ``image-configurator`` :
 
 ![wtfos4](/img/wtfos4.png)
 
-Ensuite nous pouvons laisser le fond de WTFOS ou ajouter un fond personnalisé nommé ``splashscreen.png`` à placer à la racine de la carte SD du masque DJI.
-Le format optimal est ``1920x1080``. Plus l'image est grande, plus votre masque est lent au démarrage !
+Then we can keep the WTFOS background or add a custom background named ``splashscreen.png`` to be placed at the root of the SD card of the DJI googles.
+The optimal format is ``1920x1080``. The larger the image, the slower your googles will start!
 
 <!-- MSP-OSD FONTS -->
-# 5. Les Fonts MSP-OSD
+# 5. MSP-OSD Fonts
 
-Il est possible de changer la police de l'``OSD MSP-OSD`` (à bien différencier avec L'``HUD DJI``).<br/>
-Les fichiers de police se composent en 4 fichiers ``.bin`` à placer à la racine de la carte SD du masque DJI. Ces fichiers seront lus automatiquement au démarrage du masque.<br/>
-Dans notre exemple avec Betaflight j'ai : ``font_bf.bin``, ``font_bf_2.bin``,	``font_bf_hd.bin`` et ``font_bf_hd_2.bin``.<br/>
-Si ``FakeHD`` n'est pas installé, il vous faut les 4 fichiers, sinon les deux derniers sont suffisants.
+It is possible to change the font of the MSP-OSD (be careful to distinguish it from the DJI HUD).<br/>
+The font files consist of 4 .bin files to be placed at the root of the SD card of the DJI googles. These files will be read automatically when the goggles start up.<br/>
+In our example with Betaflight I have : ``font_bf.bin``, ``font_bf_2.bin``,	``font_bf_hd.bin`` and ``font_bf_hd_2.bin``.<br/>
+If ``FakeHD`` is not installed, you need all 4 files, otherwise the last two are sufficient.
 
-Il existe plusieurs polices déja créées (par moi ou d'autres utilisateurs très sympatiques) :
+There are several fonts already created (by me or other very nice users) :
 
  - [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font)
  - [KNIFA's Material](https://github.com/Knifa/material-osd)
@@ -196,11 +199,11 @@ Il existe plusieurs polices déja créées (par moi ou d'autres utilisateurs tr�
  - [SNEAKY_FPV's colour fonts for INAV, ARDU and BF](https://sites.google.com/view/sneaky-fpv/home)
  - [VICEWIZE Italic](https://github.com/vicewize/vicewizeosdfontset)
 
-Pour une configuration différente ou plus de paramètres voir la [doc officielle de MSP-OSD](https://github.com/fpv-wtf/msp-osd#choose-a-font).
-Il est également possible de générer sa propre police (avancé) qui sera détaillé un peu plus bas dans cette doc.
+For a different configuration or more parameters see the [official MSP-OSD doc](https://github.com/fpv-wtf/msp-osd#choose-a-font).
+It is also possible to generate your own font (advanced) which will be detailed a bit lower in this doc.
 
 <!-- MOVE HUD DJI -->
-# 6. (Config avancée) : Modifier les éléments de l'``HUD DJI``
+# 6. (Advanced Setup) Modify the ``DJI HUD`` elements
 
 ⚠️ Cette partie consiste à modifier les fichiers de configuration interne du masque DJI, inutile de préciser qu'il faut procéder avec une **EXTREME PRUDENCE**.
 Réservé aux utilisateurs avec un minimum d'expérience sur un terminal. **N'exécutez pas de commande que vous ne comprenez pas**. ⚠️
@@ -233,7 +236,7 @@ adb pull system/ [destination]
 Remplacer ``[destination]`` par le dossier cible sur votre ordinateur ou la sauvegarde sera copié.
 Une fois la sauvegarde faite, passez à la suite.
 
-## Modifier l'emplacement des éléments de l'``HUD DJI``
+## Move the ``DJI HUD`` elements
 La position des éléments de l'``HUD DJI`` est définie en X et Y dans le fichier nommé ``racing_chnl_osd_win.xml`` situé dans ``/system/gui/xml/``.<br/>
 Nous téléchargeons le fichier pour le modifier localement. Exécuter :
 ```
@@ -242,7 +245,7 @@ adb pull /system/gui/xml/racing_chnl_osd_win.xml [destination]
 Nous pouvons également récupérer ce fichier dans la sauvegarde mais il est préférable de ne pas toucher au dossier par sécurité pour garder le fichier original.
 Une fois le fichier récupéré, ouvrez-le avec votre éditeur de code préféré.
 
-### Prévisualisation script Python
+### Python script to preview
 Pour nous aider à visualiser les éléments du masque virtuellement nous pouvons utiliser le script python de [Druckgott](https://github.com/druckgott/dji_stuff/tree/581dcb42ac6aa2f282d7b5c5085d97d4312492bd). Téléchargez le ZIP contenant ``show_xml.py`` depuis sa page principale puis décompressez le fichier dans le même répertoire que ``racing_chnl_osd_win.xml``.<br/>
 Téléchargez et installez la dernière version de python [ici](https://www.python.org/downloads/).<br/> Pour éxecuter le fichier python, ouvrez un terminal ou Powershell, accédez au répertoire contenant ``show_xml.py`` puis exécuter :
 ```
@@ -255,7 +258,7 @@ Une fenêtre de visualisation apparaît :
 Nous pouvons cliquer dans la fenêtre pour connaitre la position en px du curseur.<br/>
 Pour actualiser cette fenêtre, fermez-la et réexécutez la commande.
 
-### Modifier le fichier ``.xml``
+### Edit the ``.xml`` file
 
 Comme nous pouvons le voir dans la prévisualisation, les éléments s'affichent dans des "blocs". 
 Voici un exemple avec la batterie du masque nommé ``gs_voltage`` placé dans le bloc ``racing_gs_voltage_win`` ayant lui-même une positon (``dx`` et ``dy``), une taille (``w`` et ``h``) et un point d'ancrage (``alignment``).
@@ -279,7 +282,7 @@ Remplacez [cible] par le répertoire contenant votre fichier ``.xml``.<br/>
 Redémarrer le masque pour appliquer les changements.<br/><br/>
 ⚠️ Si deux éléments se touchent, si un bloc est mal écrit ou incomplet, alors l'élement ne s'affichera pas ou même le masque n'arrivera pas à charger l'osd et risque de redémarrer en boucle.
 
-## Modifier la police de l'``HUD DJI``
+## Change the font of the ``DJI HUD``
 
 Les fichiers de police sont situés dans le dossier : ``system/fonts``. La police par défaut est ``WM150font.ttf``<br/>
 Il est possible de copier un nouveau fichier de police au format ``.ttf`` uniquement dans ce même dossier.<br/>
@@ -293,7 +296,7 @@ Enfin il faut modifier le paramètre ``font.name`` dans le fichier ``racing_chnl
 
 Enregistrer le fichier, l'uploader et redémarrer le masque pour appliquer les changements.
 
-## Modifier les icônes de l'``HUD DJI``
+## Change the ``DJI HUD`` icons
 
 Les icônes sont situées dans le dossier : ``system/gui/image``.<br/>
 Il est possible de modifier une icône en la téléchargeant, en la modifiant à l'aide d'un logiciel d'édition d'image (de précision) tel que Adobe Photoshop ou Gimp, puis de l'uploader sur le masque dans le même répertoire pour écraser l'icône que vous souhaitez modifier.<br/>
@@ -306,7 +309,7 @@ Toujours dans le fichier ``racing_chnl_osd_win.xml``, voici le paramètre ``imag
 
 à vous de modifer les icônes comme bon vous semble.
 
-# 7. (Config avancée) Générer sa propre Font pour ``MSP-OSD``
+# 7. (Advanced config): Generate your own Font for ``MSP-OSD``
 
 Pour générer une police, nous utilisons une image ``.png`` au format ``576 x 1728``. Télécharger le projet [mcm2img](https://github.com/Knifa/mcm2img/tree/templates) de [Knifa](https://github.com/Knifa) sur GitHub.<br/>
 Pour créer notre OSD nous nous basons sur une grille template.
@@ -333,14 +336,14 @@ Enfin, utiliser uniquement ``font_bf_hd.bin`` et ``font_bf_hd_2.bin`` si [FakeHD
 
 Un OSD de qualité demande du temps, bonne chance !<br/>
 
-## Sources / Remerciements
+## Sources / Credits
 
 https://github.com/fpv-wtf<br/>
 https://github.com/Knifa<br/>
 https://github.com/druckgott<br/>
-Merci à Sneaky-fpv : https://sites.google.com/view/sneaky-fpv/home<br/>
-Merci à Motard Geek et à son article : https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/<br/>
+Thanks to Sneaky-fpv: https://sites.google.com/view/sneaky-fpv/home<br/>
+Thanks to Motard Geek and his article : https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/<br/>
 
-If this doc helped you and you liked it, you can buy me a coffee 😉 : https://www.buymeacoffee.com/evilm1
+**If this doc helped you and you liked it, you can buy me a coffee 😉 :** https://www.buymeacoffee.com/evilm1
 
 <p align="right"><a href="#readme-top">[back to top]</a></p>
