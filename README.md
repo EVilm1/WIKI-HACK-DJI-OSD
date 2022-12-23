@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/EVilm1/doc-DJI-Hack">
+  <a href="https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README.md">
     <img src="img/logo.png" alt="Logo" width="280">
   </a>
 
