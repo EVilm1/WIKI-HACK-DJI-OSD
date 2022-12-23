@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/EVilm1/doc-DJI-Hack">
+  <a href="https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README_FR.md">
     <img src="img/logo.png" alt="Logo" width="280">
   </a>
 
@@ -319,11 +319,11 @@ Pour générer une grille template, se placer à la racine du dossier et exécut
 python3 template2img.py template.png
 ```
 Une image ``template_overlay.png`` à été généré à la racine du dossier.<br/>
-Ouvrir l'image générée avec votre logiciel d'édition préféré (J'utilise Photoshop mais Gimp est aussi très bien).<br/>
+Ouvrir l'image générée avec votre logiciel d'édition préféré (J'utilise Photoshop mais Gimp fonctionne aussi).<br/>
 J'ai créé un fichier Photoshop ``template_overlay.psd`` utilisant le fichier ``template_overlay.png`` (avec des repères en plus) que vous pouvez télécharger [ici](https://github.com/EVilm1/WIKI-HACK-OSD-DJI/blob/master/template_overlay.psd) si vous utilisez Photoshop.<br/><br/>
 ![Photoshop](/img/photoshop_template.png)
 
-Pour savoir ou placer les icones dans la grille, nous pouvons nous calquer sur les fonts classiques de Betaflight [ici](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) ou sur des fonts HD comme [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) ou [d'autres fonts HD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#5-les-fonts-msp-osd).
+Pour savoir ou placer les icones dans la grille, nous prenons exemple sur les fonts classiques de Betaflight [ici](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) ou sur des fonts HD comme [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) ou [d'autres fonts HD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#5-les-fonts-msp-osd).
 
 Exporter l'image toujours en ``.png`` au format ``576 x 1728`` avec un fond alpha (transparent).<br/>
 
@@ -344,6 +344,6 @@ https://github.com/druckgott<br/>
 Merci à Sneaky-fpv : https://sites.google.com/view/sneaky-fpv/home<br/>
 Merci à Motard Geek et à son article : https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/<br/>
 
-If this doc helped you and you liked it, you can buy me a coffee 😉 : https://www.buymeacoffee.com/evilm1
+Si ce wiki vous a aidé, vous pouvez me remercier ici 😉 : https://www.buymeacoffee.com/evilm1
 
 <p align="right"><a href="#readme-top">[back to top]</a></p>
