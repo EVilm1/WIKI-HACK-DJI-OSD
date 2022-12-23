@@ -276,14 +276,17 @@ adb push [cible]/racing_chnl_osd_win.xml /system/gui/xml/
 Remplacez [cible] par le répertoire contenant votre fichier ``.xml``.<br/>
 (Cela aura pour effet d'écraser ``racing_chnl_osd_win.xml`` présent sur le masque, d'où l'importance de la sauvegarde)
 
-Redémarrer le masque pour appliquer les changements.<br/><br/>
+Redémarrer le masque pour appliquer les changements. Vous pouvez utiliser :
+```
+adb reboot
+```
 ⚠️ Si deux éléments se touchent, si un bloc est mal écrit ou incomplet, alors l'élement ne s'affichera pas ou même le masque n'arrivera pas à charger l'osd et risque de redémarrer en boucle.
 
 ## Modifier la police de l'``HUD DJI``
 
 Les fichiers de police sont situés dans le dossier : ``system/fonts``. La police par défaut est ``WM150font.ttf``<br/>
 Il est possible de copier un nouveau fichier de police au format ``.ttf`` uniquement dans ce même dossier.<br/>
-Dans mon cas, j'ai utilisé la police [Conthrax](https://www.dafont.com/fr/conthrax.font?text=EVilm1%27s+Font) que j'ai également utilisé dans [la police que j'ai générée](https://github.com/EVilm1/EVilm1-OSD-Font) pour le ``MSP-OSD``.<br/>
+Dans mon cas, j'ai utilisé la police [Conthrax](https://www.dafont.com/fr/conthrax.font?text=EVilm1%27s+Font) que j'ai également utilisé dans [la police que j'ai créée](https://github.com/EVilm1/EVilm1-OSD-Font) pour ``MSP-OSD``.<br/>
 
 ℹ️ Ne pas renommer le fichier ``.ttf`` sinon ça ne marchera pas et le masque n'arrivera pas à charger l'osd.
 
