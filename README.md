@@ -348,7 +348,7 @@ https://github.com/druckgott<br/>
 Thanks to Sneaky-fpv: https://sites.google.com/view/sneaky-fpv/home<br/>
 Thanks to Motard Geek and his article : https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/<br/>
 
-If you have any suggestions or questions do not hesitate : [requests](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/pulls) or ``EVilm1#3182`` on Discord.
+If you have any suggestions or questions do not hesitate : [requests](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/pulls) or ``EVilm1#3182`` on Discord.<br/>
 **If this doc helped you and you liked it, you can buy me a coffee 😉 :** https://www.buymeacoffee.com/evilm1
 
 <p align="right"><a href="#readme-top">[back to top]</a></p>
