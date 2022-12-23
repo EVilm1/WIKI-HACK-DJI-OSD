@@ -290,7 +290,7 @@ adb reboot
 
 The font files are located in the folder: ``system/fonts``. The default font is ``WM150font.ttf``<br/>
 It is now possible to copy a new font file in ``.ttf`` format only in the same folder.
-In my setup, I used the [Conthrax](https://www.dafont.com/fr/conthrax.font?text=EVilm1%27s+Font) font which I also used in [the font I created](https://github.com/EVilm1/EVilm1-OSD-Font) for the ``MSP-OSD``.<br/>
+In my setup, I used the [Conthrax](https://www.dafont.com/fr/conthrax.font?text=EVilm1%27s+Font) font which I also used in [the font I created](https://github.com/EVilm1/EVilm1-OSD-Font) for ``MSP-OSD``.<br/>
 
 ℹ️ Do not rename the file ``.ttf`` otherwise it will not work and the googles will not succeed in loading the osd.
 
@@ -315,30 +315,30 @@ You can change the icons as you wish.
 
 # 7. (Advanced config): Generate your own Font for ``MSP-OSD``
 
-Pour générer une police, nous utilisons une image ``.png`` au format ``576 x 1728``. Télécharger le projet [mcm2img](https://github.com/Knifa/mcm2img/tree/templates) de [Knifa](https://github.com/Knifa) sur GitHub.<br/>
-Pour créer notre OSD nous nous basons sur une grille template.
+To generate a font, we use a ``.png`` image in ``576 x 1728`` format. Download the [mcm2img](https://github.com/Knifa/mcm2img/tree/templates) project from [Knifa](https://github.com/Knifa) on GitHub.<br/>
+To create our OSD we use a template grid.
 
-Pour générer une grille template, se placer à la racine du dossier et exécuter ``template_overlay.py`` avec python :
+To generate a template grid, go to the root of the folder and execute ``template_overlay.py`` with python :
 ```
 python3 template2img.py template.png
 ```
-Une image ``template_overlay.png`` à été généré à la racine du dossier.<br/>
-Ouvrir l'image générée avec votre logiciel d'édition préféré (J'utilise Photoshop mais Gimp est aussi très bien).<br/>
-J'ai créé un fichier Photoshop ``template_overlay.psd`` utilisant le fichier ``template_overlay.png`` (avec des repères en plus) que vous pouvez télécharger [ici](https://github.com/EVilm1/WIKI-HACK-OSD-DJI/blob/master/template_overlay.psd) si vous utilisez Photoshop.<br/><br/>
+An image ``template_overlay.png`` has been generated at the root of the folder.<br/>
+Open the generated image with your favorite editing software (I use Photoshop but Gimp works too).<br/>
+I created a Photoshop file ``template_overlay.psd`` using the ``template_overlay.png`` file (with extra markers) which you can download [here](https://github.com/EVilm1/WIKI-HACK-OSD-DJI/blob/master/template_overlay.psd) if you use Photoshop.<br/><br/>
 ![Photoshop](/img/photoshop_template.png)
 
-Pour savoir ou placer les icones dans la grille, nous pouvons nous calquer sur les fonts classiques de Betaflight [ici](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) ou sur des fonts HD comme [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) ou [d'autres fonts HD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#5-les-fonts-msp-osd).
+To know where to place the icons in the grid, we can use the classic Betaflight fonts [here](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) or HD fonts like [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) or [other HD fonts](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#5-les-fonts-msp-osd).
 
-Exporter l'image toujours en ``.png`` au format ``576 x 1728`` avec un fond alpha (transparent).<br/>
+Export the image always in ``.png`` format ``576 x 1728`` with an alpha background (transparent).<br/>
 
-Pour convertir l'image en 4 fichiers ``.bin``, exécuter avec python (en remplaçant le nom de votre image) :<br/>
+To convert the image in 4 files ``.bin``, execute with python (replacing the name of your image) :<br/>
 ```
-python3 template2img.py [NomDeVotreImage].png
+python3 template2img.py [NameOfYourImage].png
 ```
-4 fichiers ``.bin`` ont été générés à la racine du dossier. Les renommer en ``font_bf.bin``, ``font_bf_2.bin``,	``font_bf_hd.bin``, ``font_bf_hd_2.bin`` (pour Betaflight uniquement).
-Enfin, utiliser uniquement ``font_bf_hd.bin`` et ``font_bf_hd_2.bin`` si [FakeHD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#3-fakehd) est installé, sinon les 4.
+4 files ``.bin`` have been generated in the root of the folder. Rename them to ``font_bf.bin``, ``font_bf_2.bin``, ``font_bf_hd.bin`` and ``font_bf_hd_2.bin`` (for Betaflight only).
+Finally, use only ``font_bf_hd.bin`` and ``font_bf_hd_2.bin`` if [FakeHD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#3-fakehd) is installed, otherwise all 4.
 
-Un OSD de qualité demande du temps, bonne chance !<br/>
+A quality OSD takes time, good luck !
 
 ## Sources / Credits
 
