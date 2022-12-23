@@ -205,10 +205,10 @@ It is also possible to generate your own font (advanced) which will be detailed 
 <!-- MOVE HUD DJI -->
 # 6. (Advanced Setup) Modify the ``DJI HUD`` elements
 
-⚠️ This part consists of modifying the internal configuration files of the DJI mask, needless to say that you should proceed with **EXTREME CAUTION**.
+⚠️ This part consists of modifying the internal configuration files of the DJI googles, needless to say that you should proceed with **EXTREME CAUTION**.
 Reserved for users with a minimum of experience on a terminal. **Do not execute any command that you do not understand**. ⚠️
 
-ℹ️ Accessing the configuration files requires the mask to be rooted.
+ℹ️ Accessing the configuration files requires the googles to be rooted.
 
 To access the internal files we will use the Android development tools ``ADB and Fastboot``.
 For the simplicity I advise you [Minimal ADB and Fastboot](https://androidmtk.com/download-minimal-adb-and-fastboot-tool) which is a light version but integrates all the functions we need. Here is a possible [list of commands](https://www.android-mt.com/tutoriel/liste-des-commandes-adb-et-fastboot-loutil-indispensable-du-super-utilisateur-android/74897/).<br/>
@@ -280,7 +280,7 @@ adb push [target]/racing_chnl_osd_win.xml /system/gui/xml/
 Replace [target] with the directory containing your ``.xml`` file.<br/>
 (This will overwrite ``racing_chnl_osd_win.xml`` present on the googles, so the backup is important)
 
-Restart the mask to apply the changes. You can use :
+Restart the googles to apply the changes. You can use :
 ```
 adb reboot
 ```
@@ -303,7 +303,7 @@ Save the file, upload it and restart the googles to apply the changes.
 ## Change the ``DJI HUD`` icons
 
 The icons are located in the folder: ``system/gui/image``.<br/>
-It is now possible to modify an icon by downloading it, modifying it using (precision) image editing software such as Adobe Photoshop or Gimp, and then uploading it to the mask in the same directory to overwrite the icon you wish to modify.<br/>
+It is now possible to modify an icon by downloading it, modifying it using (precision) image editing software such as Adobe Photoshop or Gimp, and then uploading it to the googles in the same directory to overwrite the icon you wish to modify.<br/>
 
 ℹ It is important to keep the same image extension and size (varies by icon).<br/>
 
