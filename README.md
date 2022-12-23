@@ -269,7 +269,7 @@ Here is an example with the googles battery named ``gs_voltage`` placed in the `
 We can change this position, the size or the anchor point (represented by a red dot in the preview).<br/>
 Save the file, then refresh the preview ``show_xml.py`` to see the changes.
 
-ℹ️ One can note the presence of an icon named ``gs_battery_icon`` and a ``gs_voltage`` parameter named ``font.name`` which will be detailed later in this doc.
+ℹ️ We can note the presence of an icon named ``gs_battery_icon`` and a ``gs_voltage`` parameter named ``font.name`` which will be detailed later in this doc.
 
 ℹ️ The XML file I modified and used in the examples at the beginning of the doc is available [here](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml). (Be careful, I modified some fonts, you have to use the same fonts otherwise it won't work) and to change the fonts of the DJI HUD it's [here](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#change-the-font-of-the-dji-hud)
 
