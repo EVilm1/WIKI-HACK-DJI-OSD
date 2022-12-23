@@ -15,7 +15,6 @@
   </a>
 
   <h3 align="center">WIKI HACK DJI OSD</h3>
-  --- English version almost finished! ---<br /><br />
 
   <p align="center">
     <a href="https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README_FR.md"><strong>Version Française ICI</strong></a><br />
