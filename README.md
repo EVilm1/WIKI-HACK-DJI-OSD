@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README.md">
-    <img src="img/logo.png" alt="Logo" width="280">
+    <img src="img/logos.png" alt="Logo" width="280">
   </a>
 
   <h3 align="center">WIKI HACK DJI OSD</h3>
