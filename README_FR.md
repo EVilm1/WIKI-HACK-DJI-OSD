@@ -247,6 +247,7 @@ Téléchargez et installez la dernière version de python [ici](https://www.pyth
 ```
 python.exe show_xml.py -i racing_chnl_osd_win.xml
 ```
+(S'il vous demande d'installer d'autres modules comme "pillow" ou autre, acceptez et installez)<br/>
 Une fenêtre de visualisation apparaît :
 
 ![show xml](/img/show_xml.jpg)
@@ -266,7 +267,7 @@ Sauvegarder le fichier, puis actualiser la prévisualisation ``show_xml.py`` pou
 
 ℹ️ On notera la présence d'une icône nommée ``gs_battery_icon`` et d'un paramètre de ``gs_voltage`` nommé ``font.name`` qui sera détaillé plus tard dans cette doc.
 
-ℹ️ Le fichier XML que j'ai modifié et que j'ai utilisé dans les exemples au début de la doc est disponible [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml)
+ℹ️ Le fichier XML que j'ai modifié et que j'ai utilisé dans les exemples au début de la doc est disponible [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml). (Attention, j'ai modifié certaines polices, vous devez utiliser les mêmes polices sinon ça ne marchera pas) et pour changer les polices du DJI HUD c'est [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#change-the-font-of-the-dji-hud).
 
 Enfin, une fois les changements effectués, pour uploader ``racing_chnl_osd_win.xml`` dans le masque, avec ``ADB`` exécuter :
 ```
