@@ -271,7 +271,7 @@ Save the file, then refresh the preview ``show_xml.py`` to see the changes.
 
 ℹ️ One can note the presence of an icon named ``gs_battery_icon`` and a ``gs_voltage`` parameter named ``font.name`` which will be detailed later in this doc.
 
-ℹ️ The XML file I modified and used in the examples at the beginning of the doc is available [here](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml) (Be careful, I modified some fonts, you have to use the same fonts otherwise it won't work) and to change the fonts of the DJI HUD it's [here](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#change-the-font-of-the-dji-hud)
+ℹ️ The XML file I modified and used in the examples at the beginning of the doc is available [here](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml). (Be careful, I modified some fonts, you have to use the same fonts otherwise it won't work) and to change the fonts of the DJI HUD it's [here](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#change-the-font-of-the-dji-hud)
 
 Finally, once the changes are done, to upload ``racing_chnl_osd_win.xml`` in the googles, with ``ADB`` run :
 ```
@@ -288,30 +288,30 @@ adb reboot
 
 ## Change the font of the ``DJI HUD``
 
-Les fichiers de police sont situés dans le dossier : ``system/fonts``. La police par défaut est ``WM150font.ttf``<br/>
-Il est possible de copier un nouveau fichier de police au format ``.ttf`` uniquement dans ce même dossier.<br/>
-Dans mon cas, j'ai utilisé la police [Conthrax](https://www.dafont.com/fr/conthrax.font?text=EVilm1%27s+Font) que j'ai également utilisé dans [la police que j'ai générée](https://github.com/EVilm1/EVilm1-OSD-Font) pour le ``MSP-OSD``.<br/>
+The font files are located in the folder: ``system/fonts``. The default font is ``WM150font.ttf``<br/>
+It is now possible to copy a new font file in ``.ttf`` format only in the same folder.
+In my setup, I used the [Conthrax](https://www.dafont.com/fr/conthrax.font?text=EVilm1%27s+Font) font which I also used in [the font I created](https://github.com/EVilm1/EVilm1-OSD-Font) for the ``MSP-OSD``.<br/>
 
-ℹ️ Ne pas renommer le fichier ``.ttf`` sinon ça ne marchera pas et le masque n'arrivera pas à charger l'osd.
+ℹ️ Do not rename the file ``.ttf`` otherwise it will not work and the googles will not succeed in loading the osd.
 
-Enfin il faut modifier le paramètre ``font.name`` dans le fichier ``racing_chnl_osd_win.xml`` modifié précédemment :
+Finally, the ``font.name`` parameter in the ``racing_chnl_osd_win.xml`` file modified previously must be edited:
 
 ![vscode1](/img/vscode2.png)
 
-Enregistrer le fichier, l'uploader et redémarrer le masque pour appliquer les changements.
+Save the file, upload it and restart the googles to apply the changes.
 
 ## Change the ``DJI HUD`` icons
 
-Les icônes sont situées dans le dossier : ``system/gui/image``.<br/>
-Il est possible de modifier une icône en la téléchargeant, en la modifiant à l'aide d'un logiciel d'édition d'image (de précision) tel que Adobe Photoshop ou Gimp, puis de l'uploader sur le masque dans le même répertoire pour écraser l'icône que vous souhaitez modifier.<br/>
+The icons are located in the folder: ``system/gui/image``.<br/>
+It is now possible to modify an icon by downloading it, modifying it using (precision) image editing software such as Adobe Photoshop or Gimp, and then uploading it to the mask in the same directory to overwrite the icon you wish to modify.<br/>
 
-ℹ Il est important de garder la même extension d'image et la même taille (varie selon les icônes).<br/>
+ℹ It is important to keep the same image extension and size (varies by icon).<br/>
 
-Toujours dans le fichier ``racing_chnl_osd_win.xml``, voici le paramètre ``image.name`` où est renseignée l'icône de la batterie du masque par exemple :
+Again in the ``racing_chnl_osd_win.xml`` file, here is the ``image.name`` parameter where the googles battery icon is set for example:
 
 ![vscode1](/img/vscode3.png)
 
-à vous de modifer les icônes comme bon vous semble.
+You can change the icons as you wish.
 
 # 7. (Advanced config): Generate your own Font for ``MSP-OSD``
 
