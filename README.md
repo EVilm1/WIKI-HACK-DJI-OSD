@@ -205,82 +205,86 @@ It is also possible to generate your own font (advanced) which will be detailed 
 <!-- MOVE HUD DJI -->
 # 6. (Advanced Setup) Modify the ``DJI HUD`` elements
 
-⚠️ Cette partie consiste à modifier les fichiers de configuration interne du masque DJI, inutile de préciser qu'il faut procéder avec une **EXTREME PRUDENCE**.
-Réservé aux utilisateurs avec un minimum d'expérience sur un terminal. **N'exécutez pas de commande que vous ne comprenez pas**. ⚠️
+⚠️ This part consists of modifying the internal configuration files of the DJI mask, needless to say that you should proceed with **EXTREME CAUTION**.
+Reserved for users with a minimum of experience on a terminal. **Do not execute any command that you do not understand**. ⚠️
 
-ℹ️ Acceder aux fichiers de configuration nécessite obligatoirement que le masque soit rooté.
+ℹ️ Accessing the configuration files requires the mask to be rooted.
 
-Pour acceder aux fichiers internes nous allons utiliser les outils de développement Android ``ADB and Fastboot``.
-Par souci de simplicité je vous conseille [Minimal ADB and Fastboot](https://androidmtk.com/download-minimal-adb-and-fastboot-tool) qui est une version allégée mais qui integre toutes les fonctions dont nous avons besoin. Voici une [liste des commandes](https://www.android-mt.com/tutoriel/liste-des-commandes-adb-et-fastboot-loutil-indispensable-du-super-utilisateur-android/74897/) possible.<br/>
+To access the internal files we will use the Android development tools ``ADB and Fastboot``.
+For the simplicity I advise you [Minimal ADB and Fastboot](https://androidmtk.com/download-minimal-adb-and-fastboot-tool) which is a light version but integrates all the functions we need. Here is a possible [list of commands](https://www.android-mt.com/tutoriel/liste-des-commandes-adb-et-fastboot-loutil-indispensable-du-super-utilisateur-android/74897/).<br/>
 
-Brancher le masque DJI au PC.<br/>
-Lancer ``Minimal ADB and Fastboot``. Exécuter :
+Connect DJI goggles to the PC.<br/>
+Start ``Minimal ADB and Fastboot``. Run :
 ```
 adb start-server
 ```
-Puis, pour afficher les appareils reconnus, exécuter :
+Then, to display the recognized devices, run :
 ```
 adb devices
 ```
-Vous devriez obtenir ce résultat :
+You should get this result:
 ```
 List of devices attached
 XXXXXXXXXABCDEF device
 ```
-Si aucun appareil ne s'affiche, assurez-vous que le port série n'est pas déjà occupé par WTFOS-Configurator ou Betaflight ouvert en arrière-plan.<br/>
+If no devices are displayed, make sure the serial port is not already occupied by WTFOS-Configurator or Betaflight open in background.<br/>
 
-Par sécurité, nous allons effectuer une sauvegarde du répertoire ou nous allons modifier les fichiers. Exécuter :
+For security reasons, we will make a backup of the directory where we will modify the files. Run :
 ```
-adb pull system/ [destination]
+adb pull system/ [target]
 ```
-Remplacer ``[destination]`` par le dossier cible sur votre ordinateur ou la sauvegarde sera copié.
-Une fois la sauvegarde faite, passez à la suite.
+Replace ``[target]`` with the target folder on your computer where the backup will be copied.
+Once the backup is done, go to the next step.
 
 ## Move the ``DJI HUD`` elements
-La position des éléments de l'``HUD DJI`` est définie en X et Y dans le fichier nommé ``racing_chnl_osd_win.xml`` situé dans ``/system/gui/xml/``.<br/>
-Nous téléchargeons le fichier pour le modifier localement. Exécuter :
+The position of the ``DJI HUD`` elements is defined in X and Y in the file named ``racing_chnl_osd_win.xml`` located in ``/system/gui/xml/``.<br/>
+We download the file to modify it locally. Run:
 ```
-adb pull /system/gui/xml/racing_chnl_osd_win.xml [destination]
+adb pull /system/gui/xml/racing_chnl_osd_win.xml [target]
 ```
-Nous pouvons également récupérer ce fichier dans la sauvegarde mais il est préférable de ne pas toucher au dossier par sécurité pour garder le fichier original.
-Une fois le fichier récupéré, ouvrez-le avec votre éditeur de code préféré.
+We can also recover this file from the backup but it is better not to touch the folder for safety reasons to keep the original file.
+Once the file is downloaded, open it with your favorite code editor.
 
 ### Python script to preview
-Pour nous aider à visualiser les éléments du masque virtuellement nous pouvons utiliser le script python de [Druckgott](https://github.com/druckgott/dji_stuff/tree/581dcb42ac6aa2f282d7b5c5085d97d4312492bd). Téléchargez le ZIP contenant ``show_xml.py`` depuis sa page principale puis décompressez le fichier dans le même répertoire que ``racing_chnl_osd_win.xml``.<br/>
-Téléchargez et installez la dernière version de python [ici](https://www.python.org/downloads/).<br/> Pour éxecuter le fichier python, ouvrez un terminal ou Powershell, accédez au répertoire contenant ``show_xml.py`` puis exécuter :
+To help us visualize the googles elements virtually we can use the python script of [Druckgott](https://github.com/druckgott/dji_stuff/tree/581dcb42ac6aa2f282d7b5c5085d97d4312492bd). Download the ZIP containing ``show_xml.py`` from its main page and then unzip the file in the same directory as ``racing_chnl_osd_win.xml``.<br/>
+Download and install the latest version of python [here](https://www.python.org/downloads/).<br/> To run the python file, open a terminal or Powershell, navigate to the directory containing ``show_xml.py`` then run :
 ```
 python.exe show_xml.py -i racing_chnl_osd_win.xml
 ```
-Une fenêtre de visualisation apparaît :
+(If it asks you to install other modules like "pillow" or other accept and install)<br/>
+A visualization window appears:
 
 ![show xml](/img/show_xml.jpg)
 
-Nous pouvons cliquer dans la fenêtre pour connaitre la position en px du curseur.<br/>
-Pour actualiser cette fenêtre, fermez-la et réexécutez la commande.
+We can click in the window to know the position in px of the cursor.<br/>
+To update this window, close it and run the command again.
 
 ### Edit the ``.xml`` file
 
-Comme nous pouvons le voir dans la prévisualisation, les éléments s'affichent dans des "blocs". 
-Voici un exemple avec la batterie du masque nommé ``gs_voltage`` placé dans le bloc ``racing_gs_voltage_win`` ayant lui-même une positon (``dx`` et ``dy``), une taille (``w`` et ``h``) et un point d'ancrage (``alignment``).
+As we can see in the preview, the elements are displayed in "blocks". 
+Here is an example with the googles battery named ``gs_voltage`` placed in the ``racing_gs_voltage_win`` block having itself a positon (``dx`` and ``dy``), a size (``w`` and ``h``) and an anchor point (``alignment``).
 
 ![vscode1](/img/vscode1.png)
 
-Nous pouvons modifier cette position, la taille ou le point d'ancrage (représenté par un point rouge dans la prévisualisation).<br/>
-Sauvegarder le fichier, puis actualiser la prévisualisation ``show_xml.py`` pour vérifier les changements.
+We can change this position, the size or the anchor point (represented by a red dot in the preview).<br/>
+Save the file, then refresh the preview ``show_xml.py`` to see the changes.
 
-ℹ️ On notera la présence d'une icône nommée ``gs_battery_icon`` et d'un paramètre de ``gs_voltage`` nommé ``font.name`` qui sera détaillé plus tard dans cette doc.
+ℹ️ One can note the presence of an icon named ``gs_battery_icon`` and a ``gs_voltage`` parameter named ``font.name`` which will be detailed later in this doc.
 
-ℹ️ Le fichier XML que j'ai modifié et que j'ai utilisé dans les exemples au début de la doc est disponible [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml)
+ℹ️ The XML file I modified and used in the examples at the beginning of the doc is available [here](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml) (Be careful, I modified some fonts, you have to use the same fonts otherwise it won't work) and to change the fonts of the DJI HUD it's [here](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#change-the-font-of-the-dji-hud)
 
-Enfin, une fois les changements effectués, pour uploader ``racing_chnl_osd_win.xml`` dans le masque, avec ``ADB`` exécuter :
+Finally, once the changes are done, to upload ``racing_chnl_osd_win.xml`` in the googles, with ``ADB`` run :
 ```
-adb push [cible]/racing_chnl_osd_win.xml /system/gui/xml/
+adb push [target]/racing_chnl_osd_win.xml /system/gui/xml/
 ```
-Remplacez [cible] par le répertoire contenant votre fichier ``.xml``.<br/>
-(Cela aura pour effet d'écraser ``racing_chnl_osd_win.xml`` présent sur le masque, d'où l'importance de la sauvegarde)
+Replace [target] with the directory containing your ``.xml`` file.<br/>
+(This will overwrite ``racing_chnl_osd_win.xml`` present on the googles, so the backup is important)
 
-Redémarrer le masque pour appliquer les changements.<br/><br/>
-⚠️ Si deux éléments se touchent, si un bloc est mal écrit ou incomplet, alors l'élement ne s'affichera pas ou même le masque n'arrivera pas à charger l'osd et risque de redémarrer en boucle.
+Restart the mask to apply the changes. You can use :
+```
+adb reboot
+```
+⚠️ If two elements touch, if a block is incorrectly written or incomplete, then the element will not display or even the googles will fail to load the osd and may restart in a loop.
 
 ## Change the font of the ``DJI HUD``
 
