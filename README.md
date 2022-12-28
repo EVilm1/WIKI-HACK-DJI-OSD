@@ -75,7 +75,7 @@ This documentation explains in detail how to modify your OSD in your DJI Googles
 The following examples will be made with the **DJI Googles V2 / Betaflight** combo.
 
 In order to understand, it is necessary to establish the basics, it is necessary to differentiate the following terms:
-* **``OSD Betaflight:``** This is the classic osd at the release of Betaflight, it is the one usually found in analog goggles.
+* **``OSD Betaflight:``** This is the classic osd at the output of Betaflight, it is the one usually found in analog goggles.
 * **``HUD DJI / CUSTOM OSD:``** Like the Betaflight osd, but interpreted by DJI, this is the default osd for DJI Googles. This feature is also called "Custom OSD" in the googles settings and is flawed because it does not use 100% of the information received from Betaflight.
 * **``WTFOS MSP-OSD:``** The MSP-OSD package is installed through the WTFOS hack, it replaces the DJI HUD and allows new features.
 
