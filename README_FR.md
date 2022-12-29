@@ -267,7 +267,7 @@ Sauvegarder le fichier, puis actualiser la prévisualisation ``show_xml.py`` pou
 
 ℹ️ On notera la présence d'une icône nommée ``gs_battery_icon`` et d'un paramètre de ``gs_voltage`` nommé ``font.name`` qui sera détaillé plus tard dans cette doc.
 
-ℹ️ Le fichier XML que j'ai modifié et que j'ai utilisé dans les exemples au début de la doc est disponible [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml). (Attention, j'ai modifié certaines polices, vous devez utiliser les mêmes polices sinon ça ne marchera pas) et pour changer les polices du DJI HUD c'est [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#change-the-font-of-the-dji-hud).
+ℹ️ Le fichier XML que j'ai modifié et que j'ai utilisé dans les exemples au début de la doc est disponible [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/racing_chnl_osd_win.xml). (Attention, j'ai modifié certaines polices, vous devez utiliser les mêmes polices sinon ça ne marchera pas) et pour changer les polices du DJI HUD c'est [ici](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README_FR.md#modifier-la-police-de-lhud-dji).
 
 Enfin, une fois les changements effectués, pour uploader ``racing_chnl_osd_win.xml`` dans le masque, avec ``ADB`` exécuter :
 ```
@@ -323,7 +323,7 @@ Ouvrir l'image générée avec votre logiciel d'édition préféré (J'utilise P
 J'ai créé un fichier Photoshop ``template_overlay.psd`` utilisant le fichier ``template_overlay.png`` (avec des repères en plus) que vous pouvez télécharger [ici](https://github.com/EVilm1/WIKI-HACK-OSD-DJI/blob/master/template_overlay.psd) si vous utilisez Photoshop.<br/><br/>
 ![Photoshop](/img/photoshop_template.png)
 
-Pour savoir ou placer les icones dans la grille, nous prenons exemple sur les fonts classiques de Betaflight [ici](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) ou sur des fonts HD comme [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) ou [d'autres fonts HD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#5-les-fonts-msp-osd).
+Pour savoir ou placer les icones dans la grille, nous prenons exemple sur les fonts classiques de Betaflight [ici](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) ou sur des fonts HD comme [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) ou [d'autres fonts HD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README_FR.md#5-les-fonts-msp-osd).
 
 Exporter l'image toujours en ``.png`` au format ``576 x 1728`` avec un fond alpha (transparent).<br/>
 
@@ -332,7 +332,7 @@ Pour convertir l'image en 4 fichiers ``.bin``, exécuter avec python (en rempla�
 python3 template2img.py [NomDeVotreImage].png
 ```
 4 fichiers ``.bin`` ont été générés à la racine du dossier. Les renommer en ``font_bf.bin``, ``font_bf_2.bin``,	``font_bf_hd.bin``, ``font_bf_hd_2.bin`` (pour Betaflight uniquement).
-Enfin, utiliser uniquement ``font_bf_hd.bin`` et ``font_bf_hd_2.bin`` si [FakeHD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/edit/main/README.md#3-fakehd) est installé, sinon les 4.
+Enfin, utiliser uniquement ``font_bf_hd.bin`` et ``font_bf_hd_2.bin`` si [FakeHD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README_FR.md#3-fakehd) est installé, sinon les 4.
 
 Un OSD de qualité demande du temps, bonne chance !<br/>
 
