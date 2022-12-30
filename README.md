@@ -72,7 +72,10 @@
 # Intro
 
 This documentation explains in detail how to modify your OSD in your DJI Googles.
-The following examples will be made with the **DJI Googles V2 / Betaflight** combo.
+The following examples will be made with the **DJI Googles V2 / Betaflight 4.3** combo.<br />
+
+**I haven't tested the 4.4 version of Betaflight with the osd in HD, an update on this doc will surely come out one day ;)**<br />
+⚠️ All manipulations and commands are done with Betaflight 4.3 (so no HD version of osd)
 
 In order to understand, it is necessary to establish the basics, it is necessary to differentiate the following terms:
 * **``OSD Betaflight:``** This is the classic osd at the output of Betaflight, it is the one usually found in analog goggles.
@@ -108,7 +111,8 @@ Before any manipulation, the googles have to be rooted, for that **WTFOS** has t
 
 ⚠️ **IMPORTANT:** Before rooting the googles, make sure that the googles and the VTX (Vista/AirUnit) are in the same version.<br />
 
-The software [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dji-assistant-2-dji-fpv-series) allows you to check the version, upgrade or downgrade the firmware of the googles and the VTX. The version **``v01.00.06.06`` known as **``"606"``** is the most used and the one that fits best.
+The software [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dji-assistant-2-dji-fpv-series) allows you to check the version, upgrade or downgrade the firmware of the googles and the VTX. The version **``v01.00.06.06``** known as **``"606"``** is the most used and the one that fits best. I did not test with other versions, it can work, the version ``606`` is just the most used, you can test...
+
 
 <!-- SERIALPORTS CONFIG -->
 ## Configure ports
@@ -121,7 +125,9 @@ set vcd_video_system = PAL
 save
 ```
 
-*With ``$``, the VTX port number **- 1**.<br /> Example: the VTX is on ``UART1``, so ``displayport_msp_serial = 0``.*
+*With ``$``, the VTX port number **- 1**.<br /> Example: the VTX is on ``UART1``, so ``displayport_msp_serial = 0``.*<br />
+
+(Reminder: I use version 4.3 of betaflight, the commands are not the same for version 4.4)
 
 <!-- MOVE MSP-OSD -->
 # 2. Move elements of MSP-OSD
@@ -282,7 +288,9 @@ Restart the googles to apply the changes. You can use :
 ```
 adb reboot
 ```
-⚠️ If two elements touch, if a block is incorrectly written or incomplete, then the element will not display or even the googles will fail to load the osd and may restart in a loop.
+⚠️ If two elements touch, if a block is incorrectly written or incomplete, then the element will not display or even the googles will fail to load the osd and may restart in a loop. 
+
+ℹ️ *Many people have tried, as I did at my beginnings, to delete entire blocks of code or to modify the ``show="true"`` parameter to delete elements (like the battery voltage and the timer). **To save you time:** This does not work and makes the goggles restart in a loop. If you want to hide elements you can change their position to hide them "behind the edges" of the screen.*
 
 ## Change the font of the ``DJI HUD``
 
