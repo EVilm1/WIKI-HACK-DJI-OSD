@@ -72,11 +72,14 @@
 # Intro
 
 Cette documentation explique en détails comment modifier votre OSD dans votre masque DJI.
-Les exemples suivants seront réalisés avec le combo **DJI Googles V2 / Betaflight**.
+Les exemples suivants seront réalisés avec le combo **DJI Googles V2 / Betaflight 4.3**.
+
+Je n'ai pas testé la version **4.4** de Betaflight avec l'osd en HD, une mise à jour de cette doc sortira sûrement un jour ;)<br />
+⚠️ Toutes les manipulations et commandes sont faites avec **Betaflight 4.3** (donc pas de version HD de l'osd).
 
 Pour poser les bases, il faut bien différencier les termes suivants :
 * **``OSD Betaflight :``** C'est l'osd classique à la sortie de Betaflight, c'est celui que l'on retrouve généralement dans des lunettes analogiques.
-* **``HUD DJI / CUSTOM OSD :``** Comme l'osd Betaflight, mais traduis par DJI, c'est l'osd par défaut des DJI Googles. Cette fonctionnalité porte également le nom de "Custom OSD" dans les paramètres du masque et présente des défauts car n'utilise pas à 100% les infos reçues   de Betaflight.
+* **``HUD DJI / CUSTOM OSD :``** Comme l'osd Betaflight, mais traduis par DJI, c'est l'osd par défaut des DJI Googles. Cette fonctionnalité porte également le nom de "Custom OSD" dans les paramètres du masque et présente des défauts car n'utilise pas à 100% les infos reçues de Betaflight.
 * **``WTFOS MSP-OSD :``** Le package MSP-OSD est installé grâce au hack WTFOS, il remplace le HUD DJI et permet de nouvelles fonctionnalités.
 
 <!-- EXEMPLE -->
@@ -108,7 +111,7 @@ Avant toute manipulation, le masque doit être rooté, pour cela **WTFOS** doit 
 
 ⚠️ **IMPORTANT :** Avant de rooter le masque, assurez-vous que le masque et le VTX (Vista/AirUnit) sont dans la même version.<br />
 
-Le logiciel [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dji-assistant-2-dji-fpv-series) permet de checker la version, upgrade ou downgrade le firmware du masque et du VTX. La version **``v01.00.06.06``** dites **``"606"``** est la plus utilisée et celle qui convient le mieux.
+Le logiciel [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dji-assistant-2-dji-fpv-series) permet de checker la version, upgrade ou downgrade le firmware du masque et du VTX. La version **``v01.00.06.06``** dites **``"606"``** est la plus utilisée et celle qui convient le mieux. Je n'ai pas testé avec d'autres versions, cela peut fonctionner, la version 606 est juste la plus utilisée, à vous de tester...
 
 <!-- SERIALPORTS CONFIG -->
 ## Configurer les ports
@@ -120,7 +123,9 @@ set displayport_msp_serial = $
 set vcd_video_system = PAL
 save
 ```
-*Avec ``$``, le numéro de port VTX **- 1**.<br /> Exemple : le VTX est sur ``UART1``, donc ``displayport_msp_serial = 0``.*
+*Avec ``$``, le numéro de port VTX **- 1**.<br /> Exemple : le VTX est sur ``UART1``, donc ``displayport_msp_serial = 0``.*<br />
+
+(Rappel : J'utilise la version **4.3** de Betaflight, les commandes ne sont pas les mêmes pour la version **4.4**)
 
 <!-- MOVE MSP-OSD -->
 # 2. Déplacer les élements de MSP-OSD
@@ -281,6 +286,8 @@ Redémarrer le masque pour appliquer les changements. Vous pouvez utiliser :
 adb reboot
 ```
 ⚠️ Si deux éléments se touchent, si un bloc est mal écrit ou incomplet, alors l'élement ne s'affichera pas ou même le masque n'arrivera pas à charger l'osd et risque de redémarrer en boucle.
+
+ℹ️ Plusieurs personnes ont essayés comme moi à mes débuts, de supprimer des blocs de code entier ou de modifier le paramètre ``show="true"`` pour supprimer des éléments (comme la tension de la batterie et le timer). **Pour vous faire gagner du temps :** Cela ne fonctionne pas et fait redémarrer le masque en boucle. Si vous souhaitez cacher des éléments vous pouvez modifier leurs position pour les cacher "derrière les bords" de l'écran.
 
 ## Modifier la police de l'``HUD DJI``
 
