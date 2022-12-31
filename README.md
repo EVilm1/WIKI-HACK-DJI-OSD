@@ -127,7 +127,7 @@ save
 
 *With ``$``, the VTX port number **- 1**.<br /> Example: the VTX is on ``UART1``, so ``displayport_msp_serial = 0``.*<br />
 
-(Reminder: I use version 4.3 of betaflight, the commands are not the same for version 4.4)
+(Reminder: I use version 4.3 of betaflight, the commands may not be the same for version 4.4) 
 
 <!-- MOVE MSP-OSD -->
 # 2. Move elements of MSP-OSD
