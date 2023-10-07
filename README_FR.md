@@ -61,7 +61,7 @@
             <li><a href="#modifier-le-fichier-xml">Modifier le fichier .xml</a></li>
           </ul>
         <li><a href="#modifier-la-police-de-lhud-dji">Modifier la police de l'HUD DJI</a></li>
-        <li><a href="#modifier-les-ic%C3%B4nes-de-lhud-dji">Modifier les icones de l'HUD DJI</a></li>
+        <li><a href="#modifier-les-ic%C3%B4nes-de-lhud-dji">Modifier les icônes de l'HUD DJI</a></li>
       </ul>
     </li>
     <li><a href="#7-config-avancée-générer-sa-propre-font-pour-msp-osd">(Config avancée) Générer sa propre Font pour MSP-OSD</a></li>
@@ -304,7 +304,7 @@ Toujours dans le fichier ``racing_chnl_osd_win.xml``, voici le paramètre ``imag
 
 ![vscode1](/img/vscode3.png)
 
-à vous de modifer les icônes comme bon vous semble.
+Les icônes que j'utilise et que j'ai modifiées se trouvent dans le dossier [CustomIcons](CustomIcons/). Vous pouvez modifer les icônes comme bon vous semble.
 
 # 7. (Config avancée) Générer sa propre Font pour ``MSP-OSD``
 
@@ -320,7 +320,7 @@ Ouvrir l'image générée avec votre logiciel d'édition préféré (J'utilise P
 J'ai créé un fichier Photoshop ``template_overlay.psd`` utilisant le fichier ``template_overlay.png`` (avec des repères en plus) que vous pouvez télécharger [ici](https://github.com/EVilm1/WIKI-HACK-OSD-DJI/blob/master/template_overlay.psd) si vous utilisez Photoshop.<br/><br/>
 ![Photoshop](/img/photoshop_template.png)
 
-Pour savoir ou placer les icones dans la grille, nous prenons exemple sur les fonts classiques de Betaflight [ici](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) ou sur des fonts HD comme [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) ou [d'autres fonts HD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README_FR.md#5-les-fonts-msp-osd).
+Pour savoir ou placer les icônes dans la grille, nous prenons exemple sur les fonts classiques de Betaflight [ici](https://github.com/betaflight/betaflight-configurator/tree/master/resources/osd/2) ou sur des fonts HD comme [EVilm1's font](https://github.com/EVilm1/EVilm1-OSD-Font) ou [d'autres fonts HD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/blob/main/README_FR.md#5-les-fonts-msp-osd).
 
 Exporter l'image toujours en ``.png`` au format ``576 x 1728`` avec un fond alpha (transparent).<br/>
 
