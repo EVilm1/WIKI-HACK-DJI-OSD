@@ -72,10 +72,9 @@
 # Intro
 
 Cette documentation explique en détails comment modifier votre OSD dans votre masque DJI.
-Les exemples suivants seront réalisés avec le combo **DJI Googles V2 / Betaflight 4.3**.
+Les exemples suivants seront réalisés avec le combo **DJI Googles V2 / Betaflight 4.4**.
 
-Je n'ai pas testé la version **4.4** de Betaflight avec l'osd en HD, une mise à jour de cette doc sortira sûrement un jour ;)<br />
-⚠️ Toutes les manipulations et commandes sont faites avec **Betaflight 4.3** (donc pas de version HD de l'osd).
+Fonctionne parfaitement sur Betaflight **4.4** avec l'osd en HD.<br />
 
 Pour poser les bases, il faut bien différencier les termes suivants :
 * **``OSD Betaflight :``** C'est l'osd classique à la sortie de Betaflight, c'est celui que l'on retrouve généralement dans des lunettes analogiques.
