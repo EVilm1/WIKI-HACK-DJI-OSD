@@ -75,9 +75,9 @@ Cette documentation explique en détails comment modifier votre OSD dans votre m
 Les exemples suivants seront réalisés avec le combo **DJI Googles V2 / Betaflight 4.4**. Fonctionne parfaitement sur Betaflight **4.4** avec l'osd en HD.<br />
 
 Pour poser les bases, il faut bien différencier les termes suivants :
-* **``OSD Betaflight :``** C'est l'osd classique à la sortie de Betaflight, c'est celui que l'on retrouve généralement dans des lunettes analogiques.
-* **``HUD DJI / CUSTOM OSD :``** Comme l'osd Betaflight, mais traduis par DJI, c'est l'osd par défaut des DJI Googles. Cette fonctionnalité porte également le nom de "Custom OSD" dans les paramètres du masque et présente des défauts car n'utilise pas à 100% les infos reçues de Betaflight.
-* **``WTFOS MSP-OSD :``** Le package MSP-OSD est installé grâce au hack WTFOS, il remplace le HUD DJI et permet de nouvelles fonctionnalités.
+* **``OSD Betaflight``** : C'est l'osd classique à la sortie de Betaflight, c'est celui que l'on retrouve généralement dans des lunettes analogiques.
+* **``HUD DJI / CUSTOM OSD``** : Comme l'osd Betaflight, mais traduis par DJI, c'est l'osd par défaut des DJI Googles. Cette fonctionnalité porte également le nom de "Custom OSD" dans les paramètres du masque et présente des défauts car n'utilise pas à 100% les infos reçues de Betaflight.
+* **``WTFOS MSP-OSD``** : Le package MSP-OSD est installé grâce au hack WTFOS, il remplace le HUD DJI et permet de nouvelles fonctionnalités.
 
 <!-- EXEMPLE -->
 ## Exemple
