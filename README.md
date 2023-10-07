@@ -306,7 +306,7 @@ Again in the ``racing_chnl_osd_win.xml`` file, here is the ``image.name`` parame
 
 ![vscode1](/img/vscode3.png)
 
-You can change the icons as you wish.
+The icons I use and have modified are in the [CustomIcons](CustomIcons/) folder. You can change the icons as you wish. 
 
 # 7. (Advanced config): Generate your own Font for ``MSP-OSD``
 
