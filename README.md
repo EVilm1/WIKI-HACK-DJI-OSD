@@ -95,7 +95,7 @@ A video example (the DJI HUD has been added on the video for the example) :<br /
 
 https://user-images.githubusercontent.com/51506790/208981180-be9528f5-7118-47d3-8a71-b43425f159c6.mp4
 
-ℹ️ The info here is from my own experience, all sources are quoted at the <a href="#readme-top">top</a> or [bottom](#sources--credits) of the doc.<br />
+ℹ️ The info here is from my own experience, all **sources** are quoted at the <a href="#readme-top">top</a> or [bottom](#sources--credits) of the doc.<br />
 ⚠️ The manipulations can involve risks (unless you've done it properly and understand what you're doing).
 
 <!-- INSTALL WTFOS -->
