@@ -86,7 +86,7 @@ We are going to make a mix between **``MSP-OSD``** for all the information at th
 
 We will also see how to change the location of the DJI HUD elements, change the DJI HUD font, create a new font for MSP-OSD... 
 
-Here is a before/after example of what it is possible to do: (I updated the screenshots and this is my last version to date!)<br />
+Here is a before/after example of what it is possible to do:<br />
 | Before (**MSP-OSD only**) | After (**MSP-OSD + FakeHD + Custom HUD DJI + Custom Fonts**) |
 |-------|-------|
 |<img src="img/before.png" width="600">|<img src="img/myosd_min.png" width="600">|
