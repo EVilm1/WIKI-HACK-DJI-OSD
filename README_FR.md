@@ -72,9 +72,7 @@
 # Intro
 
 Cette documentation explique en détails comment modifier votre OSD dans votre masque DJI.
-Les exemples suivants seront réalisés avec le combo **DJI Googles V2 / Betaflight 4.4**.
-
-Fonctionne parfaitement sur Betaflight **4.4** avec l'osd en HD.<br />
+Les exemples suivants seront réalisés avec le combo **DJI Googles V2 / Betaflight 4.4**. Fonctionne parfaitement sur Betaflight **4.4** avec l'osd en HD.<br />
 
 Pour poser les bases, il faut bien différencier les termes suivants :
 * **``OSD Betaflight :``** C'est l'osd classique à la sortie de Betaflight, c'est celui que l'on retrouve généralement dans des lunettes analogiques.
@@ -115,16 +113,7 @@ Le logiciel [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dji
 <!-- SERIALPORTS CONFIG -->
 ## Configurer les ports
 
-Une fois le masque rooté il faut configurer les ports sur Betaflight. Exécuter ce code dans le ``CLI`` de **BetaFlight-Configurator** :
-```
-set osd_displayport_device = MSP
-set displayport_msp_serial = $
-set vcd_video_system = PAL
-save
-```
-*Avec ``$``, le numéro de port VTX **- 1**.<br /> Exemple : le VTX est sur ``UART1``, donc ``displayport_msp_serial = 0``.*<br />
-
-(Rappel : J'utilise la version **4.3** de Betaflight, les commandes ne sont pas les mêmes pour la version **4.4**)
+Une fois le masque rooté, il faut configurer les ports sur Betaflight. La methode ayant changé entre Betaflight 4.3 et 4.4, je vous invite à aller voir directement sur le github officiel de fpv-wtf : [Flight Controller Setup](https://github.com/fpv-wtf/msp-osd#flight-controller-setup)
 
 <!-- MOVE MSP-OSD -->
 # 2. Déplacer les élements de MSP-OSD
