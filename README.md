@@ -96,7 +96,7 @@ A video example (the DJI HUD has been added on the video for the example) :<br /
 https://user-images.githubusercontent.com/51506790/208981180-be9528f5-7118-47d3-8a71-b43425f159c6.mp4
 
 ℹ️ The info here is from my own experience, all <a href="#readme-top">sources</a> are quoted at the top or bottom of the doc.<br />
-⚠️ The manipulations can involve risks (tiny if correctly done), you are the only ones responsible for the actions on your material.
+⚠️ The manipulations can involve risks (unless you've done it properly and understand what you're doing).
 
 <!-- INSTALL WTFOS -->
 # 1. Install WTFOS
