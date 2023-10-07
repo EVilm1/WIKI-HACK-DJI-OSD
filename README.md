@@ -72,9 +72,7 @@
 # Intro
 
 This documentation explains in detail how to modify your OSD in your DJI Googles.
-The following examples will be made with the **DJI Googles V2 / Betaflight 4.4** combo.<br />
-
-Works perfectly on Betaflight **4.4** with HD osd<br />
+The following examples will be made with the **DJI Googles V2 / Betaflight 4.4** combo. Works perfectly on Betaflight **4.4** with HD osd.<br />
 
 In order to understand, it is necessary to establish the basics, it is necessary to differentiate the following terms:
 * **``OSD Betaflight:``** This is the classic osd at the output of Betaflight, it is the one usually found in analog goggles.
@@ -116,17 +114,7 @@ The software [DJI Assistant 2 FPV](https://www.dji.com/fr/downloads/softwares/dj
 <!-- SERIALPORTS CONFIG -->
 ## Configure ports
 
-Once the googles is rooted you have to configure the ports on Betaflight. Run this code in the **BetaFlight-Configurator** ``CLI`` :
-```
-set osd_displayport_device = MSP
-set displayport_msp_serial = $
-set vcd_video_system = PAL
-save
-```
-
-*With ``$``, the VTX port number **- 1**.<br /> Example: the VTX is on ``UART1``, so ``displayport_msp_serial = 0``.*<br />
-
-(Reminder: I use version 4.3 of betaflight, the commands may not be the same for version 4.4) 
+Once the googles is rooted, you need to configure the ports on Betaflight. As the method has changed between Betaflight 4.3 and 4.4, I invite you to have a look at the official fpv-wtf github : [Flight Controller Setup](https://github.com/fpv-wtf/msp-osd#flight-controller-setup)
 
 <!-- MOVE MSP-OSD -->
 # 2. Move elements of MSP-OSD
