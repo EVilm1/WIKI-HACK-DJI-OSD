@@ -331,17 +331,18 @@ python3 template2img.py [NameOfYourImage].png
 4 files ``.bin`` have been generated in the root of the folder. Rename them to ``font_bf.bin``, ``font_bf_2.bin``, ``font_bf_hd.bin`` and ``font_bf_hd_2.bin`` (for Betaflight only).
 Finally, use only ``font_bf_hd.bin`` and ``font_bf_hd_2.bin`` if [FakeHD](https://github.com/EVilm1/WIKI-HACK-DJI-OSD#3-fakehd) is installed, otherwise all 4.
 
-A quality OSD takes time, good luck !
+**A quality OSD takes time, good luck !**
 
 ## Sources / Credits
 
 https://github.com/fpv-wtf<br/>
 https://github.com/Knifa<br/>
 https://github.com/druckgott<br/>
-Thanks to Sneaky-fpv: https://sites.google.com/view/sneaky-fpv/home<br/>
-Thanks to Motard Geek and his article : https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/<br/>
+Thanks to [Sneaky-fpv](https://sites.google.com/view/sneaky-fpv/home),<br/>
+Thanks to Motard Geek and his [article](https://www.wearefpv.fr/tuto-wtfos-hack-dji-full-osd-20221130/),<br/>
+Thanks to [Joshua Bardwell](https://www.youtube.com/@JoshuaBardwell) for his videos ;p
 
-If you have any suggestions or questions do not hesitate : [requests](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/pulls) or ``@evilm1`` on Discord.<br/>
+If you have any suggestions or questions do not hesitate : [issues](https://github.com/EVilm1/WIKI-HACK-DJI-OSD/issues) or ``@evilm1`` on Discord.<br/>
 **If this doc helped you and you liked it, you can buy me a coffee 😉 :** https://www.buymeacoffee.com/evilm1
 
 <p align="right"><a href="#readme-top">[back to top]</a></p>
