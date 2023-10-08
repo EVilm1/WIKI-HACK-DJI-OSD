@@ -25,6 +25,8 @@
     <a href="https://github.com/fpv-wtf/msp-osd"><strong>Wiki MSP-OSD</strong></a>
     ·
     <a href="https://fpv.wtf/"><strong>WTFOS Configurator</strong></a>
+    ·
+    <a href="https://github.com/EVilm1/EVilm1-OSD-Font"><strong>EVilm1's OSD Font</strong></a>
   </p>
 </div>
 
