@@ -132,7 +132,7 @@ We note that the Betaflight OSD is necessarily in a 4:3 format. No matter what f
 <!-- FAKEHD -->
 # 3. FakeHD (only Betaflight 4.3 or earlier)
 
-*If you have betaflight 4.4 or higher, you don't need to use FakeHD when using the Betaflight osd in HD natively, you can skip this part.*<br/>
+*If you have betaflight 4.4 or higher, you don't need to use FakeHD any more when using the Betaflight osd in HD natively, you can skip this part.*<br/>
 
 ``FakeHD`` is a solution to display our OSD in a 16:9 format. To understand how to set it up you need to understand how it works:<br/>
 The Betaflight OSD is a grid of 30 rows and 16 columns. It is impossible to "add" cells to stretch the 4:3 format to a 16:9 format. To get around this problem, ``FakeHD`` allows to move "blocks" of the 4:3 format to make a 16:9 format.<br/>
